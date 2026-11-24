@@ -1,0 +1,22 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//omuk//xmas-cake-2026//KO
+CALSCALE:GREGORIAN
+BEGIN:VEVENT
+UID:omuk-xmas2026-8-20261128@omuk
+DTSTAMP:20261124T000000Z
+DTSTART;VALUE=DATE:20261128
+DTEND;VALUE=DATE:20261129
+SUMMARY:신라호텔 크리스마스 케이크 예약 오픈
+DESCRIPTION:예약: 11/28부터 예약 오픈\n수령: 12/1 ~ 12/31 (화
+ 이트 홀리데이는 12/25까지) · 1층 패스트리 부티크\n채
+ 널: 공식 홈페이지(신라리워즈 회원) · 파이니스트 리
+ 저브는 전화 02-2230-3377\n- 오늘뭐먹지? 크리스마스 케이
+ 크 총정리
+BEGIN:VALARM
+TRIGGER:-PT15H
+ACTION:DISPLAY
+DESCRIPTION:내일 신라호텔 크리스마스 케이크 예약 오픈
+END:VALARM
+END:VEVENT
+END:VCALENDAR
