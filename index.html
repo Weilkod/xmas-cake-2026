@@ -1,0 +1,929 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>2026 크리스마스 케이크 84종 총정리 | 오늘뭐먹지?</title>
+<meta name="description" content="9개 브랜드 크리스마스 케이크의 정상가·예약가·예약 마감일을 한 번에 비교하세요.">
+<meta property="og:title" content="2026 크리스마스 케이크 84종 총정리 | 오늘뭐먹지?">
+<meta property="og:description" content="9개 브랜드의 정상가·예약가·마감일을 한 번에. 저장해두고 마감 전에 다시 보세요.">
+<meta name="theme-color" content="#F6F1E7" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#151311" media="(prefers-color-scheme: dark)">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#F6F1E7; --paper:#FFFDF8; --ink:#1A1A1A; --muted:#5E5A52; --line:#DDD3C2; --chip:#CFC6B4;
+    --red:#C81E28; --red-bg:#C81E28;
+    --green:#1E4D3A; --green-2:#173D2E; --green-line:#3F6B57; --on-green:#F6F1E7; --on-green-muted:#C9D6CB;
+    --green-soft:#E3EAE2; --green-ink:#1E4D3A; --soon-bg:#FBE4E1; --soon-ink:#A3161F;
+    --cta:#1A1A1A; --cta-ink:#FFFDF8; --cta-muted:#D6D0C4; --cta-line:#5C5A55;
+    --top-h:56px;
+    color-scheme: light dark;
+  }
+  @media (prefers-color-scheme: dark){
+    :root{
+      --bg:#151311; --paper:#211D19; --ink:#F3ECE4; --muted:#B3A898; --line:#3A332C; --chip:#4A423A;
+      --red:#F0625A; --red-bg:#C81E28;
+      --green:#1B3A2D; --green-2:#142E23; --green-line:#3A6250;
+      --green-soft:#1E3329; --green-ink:#8FD1B0; --soon-bg:#3A1C1A; --soon-ink:#F29A92;
+      --cta:#2B2621; --cta-line:#5C554D;
+    }
+  }
+  *{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%}
+  body{margin:0;background:var(--bg);color:var(--ink);font-family:"Noto Sans KR",system-ui,-apple-system,sans-serif;font-size:15px;line-height:1.5;word-break:keep-all;-webkit-tap-highlight-color:transparent}
+  a{color:inherit}
+  a:focus-visible,button:focus-visible,select:focus-visible,input:focus-visible,summary:focus-visible{outline:2px solid var(--red);outline-offset:2px}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 16px}
+  .hs{display:flex;overflow-x:auto;scrollbar-width:none;-webkit-overflow-scrolling:touch;scroll-snap-type:x proximity;scroll-padding-inline:16px}
+  .hs::-webkit-scrollbar{display:none}
+  .hs > *{scroll-snap-align:start}
+  /* 가로 스크롤 줄의 시작점을 본문(.wrap) 왼쪽 선에 맞춤. 스냅 여백도 같은 값이어야 처음 열 때 당겨지지 않는다 */
+  .hs-pad{--gut:max(16px, calc((100% - 1080px) / 2 + 16px));padding-inline:var(--gut);scroll-padding-inline:var(--gut)}
+  .sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+
+  /* 상단 바 */
+  .top{position:sticky;top:0;z-index:20;background:var(--bg);border-bottom:1px solid var(--line)}
+  .top-in{display:flex;align-items:center;justify-content:space-between;height:var(--top-h);padding-right:8px}
+  .logo{display:inline-flex;align-items:center;min-height:44px;text-decoration:none;font-weight:900;font-size:21px;letter-spacing:-.06em}
+  .logo span,.f-logo span{color:var(--red)}
+  .logo span{font-size:24px}
+  .icon-btn{width:44px;height:44px;display:inline-flex;align-items:center;justify-content:center;border:0;background:none;color:var(--ink);cursor:pointer;border-radius:10px;flex:none}
+
+  /* 스크롤 중 고정 필터 바 */
+  .fbar{position:fixed;left:0;right:0;top:var(--top-h);z-index:19;background:var(--bg);border-bottom:1px solid var(--line);transform:translateY(-110%);visibility:hidden;transition:transform .2s,visibility .2s}
+  .fbar.show{transform:none;visibility:visible}
+  .fbar-in{display:flex;align-items:center;gap:8px;height:52px}
+  .fbar-btn{flex:1;min-width:0;min-height:40px;display:flex;align-items:center;gap:8px;padding:0 14px;border:1.5px solid var(--ink);border-radius:999px;background:var(--paper);color:var(--ink);font:inherit;font-size:14px;font-weight:700;cursor:pointer;text-align:left}
+  .fbar-btn .sum{flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+  .fbar-btn .n{flex:none;font-weight:900;color:var(--red)}
+
+  /* 히어로 (첫 화면 높이 축소) */
+  .hero{padding-top:16px;padding-bottom:14px}
+  .label{display:inline-block;margin:0 0 8px;padding:3px 9px;background:var(--red-bg);color:#fff;font-size:12px;font-weight:700;border-radius:4px}
+  .hero h1{margin:0;font-size:clamp(28px,7.6vw,46px);line-height:1.2;font-weight:900;letter-spacing:-.05em}
+  .hero h1 em{font-style:normal;color:var(--red)}
+  .lead{margin:8px 0 0;font-size:15px;font-weight:500;color:var(--muted);max-width:36em}
+  .meta{margin:4px 0 0;font-size:12px;color:var(--muted)}
+
+  /* 마감·오픈 임박 */
+  .dd{background:var(--green);color:var(--on-green);padding:4px 0 16px}
+  .dd-head{display:flex;justify-content:space-between;align-items:center;padding-right:8px}
+  .dd-head h2{margin:0;font-size:17px;font-weight:900;letter-spacing:-.03em}
+  .dd-head a{min-height:44px;display:inline-flex;align-items:center;padding:0 8px;font-size:13px;font-weight:700;color:var(--on-green)}
+  .dd-row{gap:8px;padding-top:2px}
+  .dd-item{flex:none;width:140px;padding:12px;background:var(--green-2);border:1px solid var(--green-line);border-radius:10px;color:var(--on-green);font:inherit;text-align:left;cursor:pointer}
+  .dd-item .d{display:inline-block;padding:1px 8px;border:1px solid var(--on-green-muted);color:var(--on-green);font-size:14px;font-weight:900;border-radius:4px;font-variant-numeric:tabular-nums}
+  .dd-item .d.soon{background:var(--red-bg);border-color:var(--red-bg);color:#fff}
+  .dd-item .d.open{border-style:dashed}
+  .dd-item b{display:block;margin-top:8px;font-size:15px;line-height:1.3}
+  .dd-item small{display:block;font-size:12px;color:var(--on-green-muted)}
+  .dd-item .go{display:block;margin-top:6px;font-size:12px;font-weight:700;color:var(--on-green)}
+
+  /* 공통 섹션 제목 */
+  .kicker{margin:0;font-size:12px;font-weight:700;letter-spacing:.04em;color:var(--red)}
+  .sec{margin:2px 0 0;font-size:22px;font-weight:900;letter-spacing:-.04em}
+  .sub{margin:2px 0 0;font-size:13px;color:var(--muted)}
+  .block{margin-top:48px}
+  section[id]{scroll-margin-top:calc(var(--top-h) + 8px)}
+
+  /* 에디터 픽 */
+  .pick{padding:24px 0 8px}
+  .pick-row{gap:12px;padding-top:12px;padding-bottom:4px}
+  .pcard{flex:none;width:260px;position:relative}
+  .pcard .art{border-radius:12px}
+  .pcard .c-name{font-size:17px;font-weight:900;letter-spacing:-.04em}
+  .pct-big{position:absolute;bottom:10px;left:10px;padding:4px 10px;background:var(--red-bg);color:#fff;font-size:15px;font-weight:900;border-radius:6px}
+
+  /* 카드 */
+  .art{display:block;position:relative;border-radius:10px;overflow:hidden;background:var(--paper);border:1px solid var(--line)}
+  .art img{display:block;width:100%;aspect-ratio:1;object-fit:cover;transition:transform .3s;background:var(--line)}
+  .no{position:absolute;top:8px;left:8px;padding:1px 7px;background:#1A1A1A;color:#FFFDF8;font-size:12px;font-weight:700;border-radius:4px}
+  .bdg{position:absolute;top:8px;right:8px;padding:1px 7px;background:var(--red-bg);color:#fff;font-size:12px;font-weight:700;border-radius:4px}
+  .c-brand{display:block;margin-top:8px;font-size:12px;font-weight:500;color:var(--muted)}
+  .c-name{display:block;font-size:15px;font-weight:700;line-height:1.35;letter-spacing:-.03em}
+  .c-price{display:flex;align-items:baseline;gap:5px;margin-top:4px;flex-wrap:wrap}
+  .c-price b{font-size:16px;font-weight:900;font-variant-numeric:tabular-nums}
+  .c-price .pct{font-size:16px;font-weight:900;color:var(--red)}
+  .lab{font-size:12px;color:var(--muted)}
+  .c-orig{display:block;font-size:12px;color:var(--muted)}
+  .due{display:inline-block;margin-top:6px;padding:2px 7px;background:var(--green-soft);color:var(--green-ink);font-size:12.5px;font-weight:700;border-radius:4px}
+  .due.soon{background:var(--soon-bg);color:var(--soon-ink)}
+  .soldout .art img{filter:grayscale(.7);opacity:.7}
+  .card{position:relative;min-width:0}
+  .card-link,.pcard-link{display:block;text-decoration:none;color:var(--ink)}
+  @media (hover:hover){
+    .card-link:hover .art img,.pcard-link:hover .art img{transform:scale(1.03)}
+    .card-link:hover .c-name,.pcard-link:hover .c-name{text-decoration:underline;text-underline-offset:3px}
+  }
+
+  /* 필터 */
+  #find{padding-top:28px}
+  .chips{gap:8px;padding-top:14px}
+  .chip{flex:none;min-height:44px;padding:0 16px;border-radius:999px;border:1.5px solid var(--chip);background:var(--paper);color:var(--ink);font:inherit;font-size:14px;font-weight:700;cursor:pointer;white-space:nowrap}
+  .chip small{margin-left:4px;font-size:12px;font-weight:500;color:var(--muted)}
+  .chip[aria-pressed="true"]{background:var(--ink);border-color:var(--ink);color:var(--bg)}
+  .chip[aria-pressed="true"] small{color:inherit;opacity:.8}
+  .chips.brand{gap:6px;padding-top:8px}
+  .chips.brand .chip{border-width:1px;border-radius:8px;padding:0 12px;font-size:13px;font-weight:500}
+  .chips.brand .chip[aria-pressed="true"]{background:var(--red-bg);border-color:var(--red-bg);color:#fff}
+  .tools{display:grid;gap:8px;margin-top:14px}
+  .sels{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1.35fr) minmax(0,.95fr);gap:6px}
+  .tools input,.sel select{width:100%;height:48px;margin:0;font:inherit;font-size:16px;padding:0 14px;border:1px solid var(--chip);border-radius:10px;background:var(--paper);color:var(--ink)}
+  .sel{position:relative;display:block;min-width:0}
+  .sel select{-webkit-appearance:none;appearance:none;padding-right:36px;font-weight:500;text-overflow:ellipsis;white-space:nowrap;overflow:hidden;cursor:pointer}
+  .sels .sel select{padding:0 22px 0 10px;letter-spacing:-.04em}
+  .sels .sel::after{right:9px;width:6px;height:6px}
+  .sel::after{content:"";position:absolute;right:15px;top:50%;width:7px;height:7px;border-right:2px solid var(--muted);border-bottom:2px solid var(--muted);transform:translateY(-70%) rotate(45deg);pointer-events:none}
+  .sel select.on{border:1.5px solid var(--ink);font-weight:700}
+  @media (min-width:760px){ .tools{grid-template-columns:minmax(0,1fr) minmax(0,1.6fr)} .sels .sel select{padding:0 32px 0 14px} .sels .sel::after{right:14px} }
+  .count{display:flex;align-items:center;justify-content:space-between;gap:8px;margin:12px 0 12px;min-height:32px;font-size:13px;color:var(--muted)}
+  .count b{color:var(--ink)}
+  .reset{min-height:44px;margin:-6px -8px -6px 0;padding:0 8px;border:0;background:none;color:var(--ink);font:inherit;font-size:13px;font-weight:700;text-decoration:underline;text-underline-offset:3px;cursor:pointer}
+  .grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px 12px}
+  .empty{grid-column:1/-1;padding:36px 16px;text-align:center;background:var(--paper);border:1px dashed var(--chip);border-radius:12px;font-size:14px;color:var(--muted)}
+  .empty button{margin-top:12px;min-height:44px;padding:0 18px;border-radius:999px;border:1.5px solid var(--ink);background:none;color:var(--ink);font:inherit;font-size:14px;font-weight:700;cursor:pointer}
+  .more{display:block;margin:28px auto 0;min-height:48px;width:min(100%,360px);border:1.5px solid var(--ink);border-radius:999px;background:transparent;color:var(--ink);font:inherit;font-size:15px;font-weight:700;cursor:pointer}
+
+  /* 일정·가격표 탭 */
+  .tabs{display:flex;margin-top:14px;border-bottom:2px solid var(--ink)}
+  .tab{flex:1;min-height:48px;border:0;background:none;color:var(--muted);font:inherit;font-size:15px;font-weight:700;cursor:pointer;border-bottom:3px solid transparent;margin-bottom:-2px}
+  .tab[aria-selected="true"]{color:var(--ink);border-bottom-color:var(--red)}
+  .panel .sub{margin-top:12px}
+
+  /* 예약 일정 */
+  .sched{margin-top:8px}
+  .sched details{border-bottom:1px solid var(--line)}
+  .sched summary{list-style:none;display:grid;grid-template-columns:minmax(0,1fr) auto 20px;gap:12px;align-items:center;min-height:56px;padding:10px 0;cursor:pointer}
+  .sched summary::-webkit-details-marker,details.pt summary::-webkit-details-marker{display:none}
+  .s-brand{font-size:15px;font-weight:700}
+  .s-brand small{margin-left:4px;font-size:12px;font-weight:400;color:var(--muted)}
+  .s-dd{text-align:right}
+  .s-dd b{display:block;font-size:15px;font-weight:900;font-variant-numeric:tabular-nums}
+  .s-dd b.soon{color:var(--red)}
+  .s-dd small{display:block;font-size:12px;color:var(--muted)}
+  .chev{color:var(--muted);transition:transform .2s}
+  details[open] > summary .chev{transform:rotate(180deg)}
+  .info{display:grid;grid-template-columns:64px minmax(0,1fr);gap:6px 12px;margin:0 0 12px;font-size:13.5px}
+  .info dt{color:var(--muted)}
+  .info dd{margin:0}
+  .srcs{margin:0 0 14px;font-size:12px;color:var(--muted)}
+  .srcs a{color:var(--muted);text-underline-offset:2px}
+  .s-acts{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 12px}
+  .mini{min-height:44px;display:inline-flex;align-items:center;gap:6px;padding:0 14px;border:1px solid var(--chip);border-radius:10px;background:var(--paper);color:var(--ink);font:inherit;font-size:13px;font-weight:700;text-decoration:none;cursor:pointer}
+  .mini svg{width:16px;height:16px;flex:none}
+
+  /* 가격표 */
+  .ptables{margin-top:8px;display:grid;gap:8px}
+  details.pt{background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:0 14px}
+  details.pt summary{list-style:none;display:grid;grid-template-columns:minmax(0,1fr) auto 20px;gap:10px;align-items:center;min-height:52px;cursor:pointer;font-weight:700;font-size:15px}
+  .rng{font-weight:500;font-size:12.5px;color:var(--muted)}
+  table{width:100%;border-collapse:collapse;margin:0 0 12px;font-size:13px}
+  th,td{text-align:left;padding:7px 4px;border-top:1px solid var(--line);vertical-align:top}
+  th{font-size:12px;color:var(--muted);font-weight:500}
+  td.num,th.num{text-align:right;white-space:nowrap}
+  td .ch{display:block;font-size:12px;color:var(--muted)}
+  td.pre{color:var(--red);white-space:normal;min-width:84px}
+  td.pre .v{white-space:nowrap}
+  td a{text-decoration-color:var(--chip);text-underline-offset:3px}
+  .sheet:focus{outline:none}
+
+  /* 공유 */
+  .cta{margin-top:48px;padding:24px 18px;background:var(--cta);color:var(--cta-ink);border-radius:14px}
+  .cta h2{margin:0;font-size:21px;font-weight:900;line-height:1.3;letter-spacing:-.04em}
+  .cta p{margin:6px 0 18px;font-size:13px;color:var(--cta-muted)}
+  .cta-btns{display:flex;flex-direction:column;gap:8px}
+  .btn{min-height:50px;display:flex;align-items:center;justify-content:center;gap:6px;padding:0 16px;border-radius:10px;border:1px solid var(--cta-line);background:transparent;color:var(--cta-ink);font:inherit;font-size:15px;font-weight:700;text-decoration:none;cursor:pointer}
+  .btn.primary{background:var(--red-bg);border-color:var(--red-bg);color:#fff}
+  .btn.kakao{background:#FEE500;border-color:#FEE500;color:#191919}
+  .btn.ghost{background:var(--paper);border-color:var(--ink);color:var(--ink)}
+  .btn .bsub{display:block;font-size:11.5px;font-weight:500;opacity:.85}
+  .btn.stack{flex-direction:column;gap:0;line-height:1.25}
+
+  footer{padding-top:32px;padding-bottom:calc(48px + env(safe-area-inset-bottom));font-size:12px;color:var(--muted)}
+  footer p{margin:0 0 4px}
+  .f-logo{margin:0 0 8px!important;font-size:18px;font-weight:900;letter-spacing:-.06em;color:var(--ink)}
+
+  /* 바텀 시트 (상세·필터 공용) */
+  .sheet-bg{position:fixed;inset:0;z-index:40;background:rgba(20,20,20,.55)}
+  .sheet{position:fixed;left:0;right:0;bottom:0;z-index:41;max-width:560px;margin:0 auto;max-height:90vh;max-height:90dvh;display:flex;flex-direction:column;background:var(--paper);color:var(--ink);border-radius:20px 20px 0 0;box-shadow:0 -8px 30px rgba(0,0,0,.2)}
+  .sheet.dragging{transition:none}
+  .sheet.settle{transition:transform .2s}
+  .sheet[hidden],.sheet-bg[hidden]{display:none}
+  .sheet-head{position:relative;display:flex;align-items:center;justify-content:space-between;min-height:52px;padding:8px 8px 0 16px;touch-action:none}
+  .sheet-head h2.fs-title{margin:0;font-size:18px;font-weight:900}
+  .grab{position:absolute;top:8px;left:50%;width:40px;height:4px;margin-left:-20px;border-radius:2px;background:var(--chip)}
+  .sheet-body{overflow-y:auto;overscroll-behavior:contain;padding:0 16px 16px}
+  .sh-img{position:relative;border-radius:12px;overflow:hidden;background:var(--bg)}
+  .sh-img img{display:block;width:100%;aspect-ratio:16/10;object-fit:cover;background:var(--line)}
+  .sh-brand{margin:12px 0 0;font-size:13px;font-weight:500;color:var(--muted)}
+  .sheet h2#sheetName{margin:0;font-size:22px;font-weight:900;line-height:1.25;letter-spacing:-.05em}
+  .sh-price{display:flex;align-items:baseline;gap:6px;flex-wrap:wrap;margin-top:8px}
+  .sh-price .pct{font-size:22px;font-weight:900;color:var(--red)}
+  .sh-price b{font-size:22px;font-weight:900;font-variant-numeric:tabular-nums}
+  .sh-price s{font-size:13px;color:var(--muted)}
+  .sh-key{margin:10px 0 0;padding:10px 12px;background:var(--bg);border-radius:10px;font-size:13.5px;line-height:1.55}
+  .sh-key b.red{font-size:15px}
+  .sh-desc{margin:12px 0 0;font-size:14px;color:var(--muted)}
+  .sh-note{margin:4px 0 0;font-size:12px;color:var(--muted)}
+  .tags{display:flex;gap:5px;flex-wrap:wrap;margin-top:10px}
+  .tag{font-size:12px;padding:2px 9px;border-radius:999px;background:var(--green-soft);color:var(--green-ink)}
+  .sheet .info{margin-top:14px;padding:14px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .red{color:var(--red)}
+  .sheet .s-acts{margin:12px 0 0}
+  .sheet .srcs{margin:12px 0 0}
+  .sheet-actions{display:flex;gap:8px;padding:12px 16px calc(12px + env(safe-area-inset-bottom));border-top:1px solid var(--line)}
+  .sheet-actions .icon-btn{width:52px;height:52px;border:1px solid var(--chip)}
+  .sheet-actions .icon-btn[aria-pressed="true"]{color:#C81E28}
+  .sheet-actions .icon-btn[aria-pressed="true"] svg path{fill:currentColor}
+  .sheet-actions .btn{flex:1;min-height:52px}
+  /* 바로 예약되는 곳(카카오·네이버 예약): 버튼을 더 크고 눈에 띄게 */
+  .sheet-actions.big .icon-btn{width:60px;height:64px}
+  .sheet-actions .btn.big{min-height:64px;font-size:18px;font-weight:900;letter-spacing:-.02em;box-shadow:0 4px 14px rgba(200,30,40,.35)}
+  .sheet-actions .btn.big .bsub{font-size:13px;font-weight:700;opacity:.95}
+  .sheet-actions .btn.big svg{width:18px;height:18px;margin-left:4px;vertical-align:-3px}
+  .fs-field{display:block;margin-top:14px}
+  .fs-label{display:block;margin:0 0 6px;font-size:13px;font-weight:700;color:var(--muted)}
+
+  .toast{position:fixed;left:50%;bottom:calc(24px + env(safe-area-inset-bottom));z-index:60;transform:translateX(-50%);padding:10px 16px;border-radius:999px;background:#1A1A1A;color:#fff;font-size:13px;opacity:0;pointer-events:none;transition:opacity .2s;white-space:nowrap}
+  .toast.show{opacity:1}
+
+  @media (min-width:640px){
+    .lead{font-size:16px}
+    .grid{grid-template-columns:repeat(3,minmax(0,1fr))}
+    .cta{padding:32px}
+    .cta-btns{flex-direction:row}
+    .cta-btns > *{flex:1}
+    .sheet{top:50%;bottom:auto;transform:translateY(-50%);border-radius:20px;max-height:86vh}
+    .grab{display:none}
+  }
+  @media (min-width:760px){ .ptables{grid-template-columns:repeat(2,minmax(0,1fr))} }
+  @media (min-width:960px){
+    .grid{grid-template-columns:repeat(4,minmax(0,1fr));gap:32px 20px}
+    /* PC: 가로 스크롤 대신 본문 폭 안에 격자로 정렬 */
+    .dd-row{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:10px;overflow:visible;max-width:1080px;margin:0 auto;padding-inline:16px}
+    .dd-item{width:auto}
+    .pick-row{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:20px;overflow:visible;max-width:1080px;margin:0 auto;padding-inline:16px}
+    .pcard{width:auto}
+  }
+  /* 마우스 사용 환경에서 가로 스크롤 줄이 남는 폭(태블릿·좁은 창)이면 얇은 스크롤바 표시 */
+  @media (hover:hover) and (pointer:fine) and (max-width:959px){
+    .hs{scrollbar-width:thin;padding-bottom:10px}
+    .hs::-webkit-scrollbar{display:block;height:6px}
+    .hs::-webkit-scrollbar-thumb{background:var(--chip);border-radius:3px}
+  }
+  @media (prefers-reduced-motion:reduce){ *{transition:none!important} }
+</style>
+</head>
+<body>
+<header class="top">
+  <div class="wrap top-in">
+    <a class="logo" href="#top">오늘뭐먹지<span>?</span></a>
+    <button class="icon-btn" type="button" id="shareTop" aria-label="이 페이지 공유하기"><svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12"/><path d="M7 8l5-5 5 5"/><path d="M5 13v6a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-6"/></svg></button>
+  </div>
+</header>
+
+<div class="fbar" id="fbar">
+  <div class="wrap fbar-in">
+    <button class="fbar-btn" type="button" id="fbarBtn" aria-haspopup="dialog">
+      <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 6h16M7 12h10M10 18h4"/></svg>
+      <span class="sum" id="fbarSum">필터·정렬</span>
+      <span class="n" id="fbarN"></span>
+    </button>
+  </div>
+</div>
+
+<main>
+<section id="top" class="wrap hero">
+  <p class="label">2026 크리스마스 특집</p>
+  <h1>크리스마스 케이크 <em><span id="hCount">84</span>종</em> 총정리</h1>
+  <p class="lead"><span id="hCount2">84</span>개 케이크, 비교부터 예약 페이지까지 한 번에 🎄</p>
+</section>
+
+<section class="dd" aria-labelledby="dd-h">
+  <div class="wrap dd-head">
+    <h2 id="dd-h">마감·오픈 임박</h2>
+    <a href="#schedule" id="ddAll">전체 일정 보기</a>
+  </div>
+  <div class="hs hs-pad dd-row" id="ddRow"></div>
+</section>
+
+<section class="pick" aria-labelledby="pk-h">
+  <div class="wrap">
+    <p class="kicker">EDITOR'S PICK</p>
+    <h2 class="sec" id="pk-h">에디터가 먼저 고른 케이크</h2>
+  </div>
+  <div class="hs hs-pad pick-row" id="pickRow"></div>
+</section>
+
+<section id="find" aria-labelledby="fd-h">
+  <div class="wrap">
+    <h2 class="sec" id="fd-h">테마·브랜드로 찾기</h2>
+    <p class="sub">카드를 누르면 예약 기간과 픽업 정보를 볼 수 있어요.</p>
+  </div>
+  <div class="wrap">
+    <div class="tools" id="tools">
+      <input type="search" id="q" placeholder="케이크 이름·재료 검색" aria-label="케이크 검색" enterkeyhint="search">
+      <div class="sels">
+        <label class="sel"><span class="sr">테마</span><select id="themeSel" data-k="theme"></select></label>
+        <label class="sel"><span class="sr">브랜드</span><select id="brandSel" data-k="brand"></select></label>
+        <label class="sel"><span class="sr">정렬</span><select id="sortSel" data-k="sort"></select></label>
+      </div>
+    </div>
+    <div class="count" id="countRow"><p id="count" aria-live="polite" style="margin:0"></p><button class="reset" type="button" id="reset" hidden>필터 초기화</button></div>
+    <div class="grid" id="grid"></div>
+    <button class="more" id="more" type="button" hidden></button>
+  </div>
+</section>
+
+<section id="schedule" class="wrap block" aria-labelledby="sc-h">
+  <h2 class="sec" id="sc-h">예약 일정·가격표</h2>
+  <div class="tabs" role="tablist" aria-label="정보 종류">
+    <button class="tab" type="button" role="tab" id="tabS" aria-controls="panelS" aria-selected="true">브랜드별 예약 일정</button>
+    <button class="tab" type="button" role="tab" id="tabP" aria-controls="prices" aria-selected="false" tabindex="-1">브랜드별 가격표</button>
+  </div>
+  <div class="panel" id="panelS" role="tabpanel" aria-labelledby="tabS">
+    <p class="sub">마감이 가까운 순서예요. 눌러서 예약 채널과 혜택을 확인하고, 마감일을 캘린더에 넣어두세요. 혜택은 채널과 시기에 따라 달라질 수 있어요.</p>
+    <div class="sched" id="sched"></div>
+  </div>
+  <div class="panel" id="prices" role="tabpanel" aria-labelledby="tabP" hidden>
+    <p class="sub">정상가는 공식 채널 기준이에요. 예약가는 지금(11/24) 받을 수 있는 대표 채널의 사전예약 가격이고, 채널·쿠폰에 따라 더 낮아질 수 있어요.</p>
+    <div class="ptables" id="ptables"></div>
+  </div>
+</section>
+
+<section id="share" class="wrap" aria-labelledby="sh-h">
+  <div class="cta">
+    <h2 id="sh-h">같이 고를 사람에게<br>보내주세요</h2>
+    <p>신상 케이크와 마감 소식은 인스타그램과 카카오 채널에서 받아보세요.</p>
+    <div class="cta-btns">
+      <button class="btn primary" type="button" id="shareCta">링크 공유하기</button>
+      <a class="btn kakao" href="https://pf.kakao.com/_xctVxlxj" target="_blank" rel="noopener">카카오 채널 추가</a>
+      <a class="btn" href="https://www.instagram.com/omuk.official/" target="_blank" rel="noopener">@omuk.official 팔로우</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="wrap">
+  <p class="f-logo">오늘뭐먹지<span>?</span></p>
+  <p>정보 확인일 2026년 11월 24일 · 사진과 가격은 각 브랜드 공식 홈페이지, 공식 인스타그램, 카카오 공식 브랜드관을 기준으로 정리했어요.</p>
+  <p>스타벅스 매장 홀케이크는 공식 홈페이지에 가격이 없어 언론 보도(스타벅스 발표) 기준이에요. 가격은 매장·채널별로 다를 수 있어요.</p>
+  <p>제품 사진의 저작권은 각 브랜드에 있어요. 케이크를 누르면 사진·가격 출처를 확인할 수 있어요.</p>
+</footer>
+
+<div class="sheet-bg" id="sheetBg" hidden></div>
+
+<section class="sheet" id="sheet" tabindex="-1" role="dialog" aria-modal="true" aria-labelledby="sheetName" hidden>
+  <div class="sheet-head">
+    <span class="grab" aria-hidden="true"></span>
+    <span></span>
+    <button class="icon-btn" type="button" data-close aria-label="닫기"><svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+  </div>
+  <div class="sheet-body" id="sheetBody"></div>
+  <div class="sheet-actions">
+    <button class="icon-btn" type="button" id="sheetShare" aria-label="이 케이크 공유하기"><svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12"/><path d="M7 8l5-5 5 5"/><path d="M5 13v6a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-6"/></svg></button>
+    <a class="btn primary" id="sheetLink" href="#" target="_blank" rel="noopener">예약 안내 보기</a>
+  </div>
+</section>
+
+<section class="sheet" id="fsheet" tabindex="-1" role="dialog" aria-modal="true" aria-labelledby="fsTitle" hidden>
+  <div class="sheet-head">
+    <span class="grab" aria-hidden="true"></span>
+    <h2 class="fs-title" id="fsTitle">필터·정렬</h2>
+    <button class="icon-btn" type="button" data-close aria-label="닫기"><svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+  </div>
+  <div class="sheet-body">
+    <label class="fs-field"><span class="fs-label">테마</span><span class="sel"><select id="fsTheme" data-k="theme"></select></span></label>
+    <label class="fs-field"><span class="fs-label">브랜드</span><span class="sel"><select id="fsBrand" data-k="brand"></select></span></label>
+    <label class="fs-field"><span class="fs-label">정렬</span><span class="sel"><select id="fsSort" data-k="sort"></select></span></label>
+  </div>
+  <div class="sheet-actions">
+    <button class="btn ghost" type="button" id="fsReset" style="flex:none;padding:0 18px">초기화</button>
+    <button class="btn primary" type="button" id="fsApply">결과 보기</button>
+  </div>
+</section>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script>
+const BRANDS = {"스타벅스":{"cat":"카페","reserve":"11/13 ~ 12/11 (노엘 트리는 11/12 별도 오픈)","deadline":"2026-12-11","pickup":"12/19 ~ 12/27 지정 매장 (조선델리 2종은 12/25까지)","channel":"스타벅스 앱 사이렌 오더 > 홀케이크 예약 · 바움쿠헨·아이스크림 케이크는 온라인 스토어","perk":"리워드 회원 10% 쿠폰(11/13~11/26), 신한·우리카드 10% 청구할인(1인 최대 5천원) + 아메리카노 1+1 쿠폰, 매장 픽업 예약 시 산타 베어리스타 캔들 한정 증정. 노엘 트리는 할인 제외","src":[["공식 홈페이지","https://www.starbucks.co.kr/menu/food_list.do?CATE_CD=product_cake"],["공식 인스타그램","https://www.instagram.com/starbuckskorea/p/DfYzkuDme0x/"],["온라인 스토어","https://onlinestore.starbucks.co.kr/goods/1006086"],["가격 보도","https://www.diarypoint.com/news/articleView.html?idxno=7194"]]},"파스쿠찌":{"cat":"카페","reserve":"10/29 ~ 12/17 (크리스탈 스완은 카카오 예약하기 ~12/13)","deadline":"2026-12-17","pickup":"12/18 ~ 12/27","channel":"해피오더 앱, 카카오 예약하기, 땡겨요, 배달의민족","perk":"해피오더 예약 할인이 단계별로 줄어요: 10/29~11/8 40% → 11/9~22 30% → 지금(11/23~12/17) 25%. 선착순 카드사 2,000원 추가 할인. 크리스탈 스완은 카카오 예약하기 25%","src":[["공식 홈페이지","https://www.pascucci.co.kr/product/productList.asp?typeCode=00210020"],["예약 이벤트","https://www.pascucci.co.kr/event/eventView.asp?teSeq=1049"],["공식 인스타그램","https://www.instagram.com/p/DfD4mniiKSt/"]]},"뚜레쥬르":{"cat":"베이커리","reserve":"11/11 ~ 12/22","deadline":"2026-12-22","pickup":"12/18 ~ 12/25 지정 매장","channel":"뚜레쥬르 앱, 카카오톡 선물하기","perk":"홀리데이 35종 최대 30% 할인, 멤버십 3,000원 쿠폰, 30만원 이상 단체 5% 추가 할인(12/18까지, 최대 10만원). 퀸 2종 예약 시 스트로베리 퀸 클리커 2,800원 구매 가능","src":[["공식 마이크로사이트","https://www.tlj.co.kr/microsite/2026/holiday/intro.asp"],["공식 홈페이지","https://www.tlj.co.kr/product/new.asp"],["공식 인스타그램","https://www.instagram.com/touslesjours_kr/reel/DflCYD0pbPt/"]]},"팀홀튼":{"cat":"카페","reserve":"1차 11/16 ~ 11/30 (팀스오더 11/17부터)","deadline":"2026-11-30","pickup":"12/18 ~ 12/27 (예약 시 매장·날짜 지정)","channel":"팀스오더 앱, 카카오톡 예약하기","perk":"1차 예약 5종 모두 15% 할인 + 한정 틴케이스 증정. 매장별로 조기 마감 중. 한국 진출 후 첫 크리스마스 홀케이크","src":[["공식 홈페이지","https://www.tim-hortons.co.kr/ORD0101/13000000"],["카카오 예약하기","https://booking.kakao.com/promo/2611_timhortons"],["공식 인스타그램","https://www.instagram.com/timhortons.kr/reel/DfyV0zJoKpx/"]]},"파리바게뜨":{"cat":"베이커리","reserve":"11/11 ~ 12/19 (카카오·배달앱은 11/16부터)","deadline":"2026-12-19","pickup":"12/21 ~ 12/25 지정 매장","channel":"파바앱, 해피오더, 카카오톡, 요기요, 땡겨요, 당근, 배민","perk":"파바앱: 베리밤 와르르·베리밤 초코·기적같은 오늘 최대 30%, 나머지 최대 20%. 카카오톡 예약하기는 제품별 10~20%. 요기요 최대 11,000원, 땡겨요·당근 최대 10,000원, 배민 최대 8,000원 할인","src":[["공식 홈페이지","https://www.paris.co.kr/promotion/holiday-2026-preorder/"],["공식 인스타그램","https://www.instagram.com/parisbaguette_kr/"],["카카오 공식 브랜드관","https://gift.kakao.com/product/14618795"]]},"배스킨라빈스":{"cat":"아이스크림","reserve":"11/19 ~ 12/15 (일반 예약)","deadline":"2026-12-15","pickup":"12/21 ~ 12/25 지정 매장","channel":"해피오더, 배라앱, 카카오톡 예약하기·선물하기, 땡겨요, 배민","perk":"해피오더 케이크 최대 23% + 카드 최대 6%, 배라앱 최대 29%, 카카오 예약하기 최대 30% + 선착순 1천원. 표시한 예약가는 해피오더 기준. 올해 10종","src":[["공식 홈페이지","https://www.baskinrobbins.co.kr/menu/list.php?category=B"],["예약 이벤트","https://www.baskinrobbins.co.kr/play/event/view.php?seq=650"],["공식 인스타그램","https://www.instagram.com/p/DgEQd_XI_jT/"]]},"투썸플레이스":{"cat":"카페","reserve":"11/19 ~ 12/20","deadline":"2026-12-20","pickup":"12/18 ~ 12/31 원하는 시간·매장","channel":"투썸하트 앱","perk":"케이크별 10~15% 할인 쿠폰, 제휴카드(BC·삼성·하나) 3만원 이상 3,000원 할인, 기프트카드 결제 1,500원 페이백(카드 혜택과 중복 불가). 썰매·스노우맨·레드 베리는 12/1 출시","src":[["공식 이벤트","https://mo.twosome.co.kr/ev/eventCakeDtl.do?annoSeqNo=261111"],["공식 메뉴","https://mo.twosome.co.kr/mn/menuInfoList.do"],["공식 인스타그램","https://www.instagram.com/p/Df4NMvlIOPW/"]]},"JW 메리어트 서울":{"cat":"호텔","reserve":"11/10 ~ 12/22 (픽업 3일 전까지)","deadline":"2026-12-22","pickup":"12/1 ~ 12/25, 11:30~20:30 · 2층 파티세리","channel":"네이버 예약, 호텔 파티세리 (반포)","perk":"네이버 예약 선결제 시 10% 할인 (12/24·25 픽업 제외). 슈톨렌 75,000원·파네토네 70,000원도 판매","src":[["공식 홈페이지","https://www.marriott.com/ko/offers/festive-cake-off-262714"],["홀리데이 페이지","https://www.marriott.com/ko/hotels/seljw-jw-marriott-hotel-seoul/experiences/holidays/"],["네이버 예약","https://booking.naver.com/booking/6/bizes/237590/items/4646589"]]},"신라호텔":{"cat":"호텔","reserve":"11/28부터 예약 오픈","deadline":null,"opens":"2026-11-28","pickup":"12/1 ~ 12/31 (화이트 홀리데이는 12/25까지) · 1층 패스트리 부티크","channel":"공식 홈페이지(신라리워즈 회원) · 파이니스트 리저브는 전화 02-2230-3377","perk":"온라인 예약 시 상품당 보증금 1만원(수령 시 환불). '더 파이니스트 리저브'는 하루 최대 3개, 60만원으로 국내 호텔 최고가 수준","src":[["공식 홈페이지","https://www.shillahotels.com/ko/theshilla/seoul/offers/eventDetail.do?no=6056"],["공식 인스타그램","https://www.instagram.com/theshillaseoul/p/DgFBKBtEgYS/"]]}};
+const CAKES = [{"b":"스타벅스","n":"조선델리 노엘 트리 케이크","d":"조선델리 셰프와 만든 트리 모양 프리미엄 케이크. 공개 당일 완판됐어요.","tags":["초코","트리"],"badge":"품절","soldout":true,"extra":false,"price":109000,"pre":null,"preLabel":null,"size":"1,000g · 높이 22cm","note":"리워드 쿠폰·카드 할인 제외 · 13개 지정 매장 수령","imgPage":"https://www.starbucks.co.kr/menu/food_view.do?product_cd=9300000006950","imgLabel":"공식 홈페이지","priceSrc":"http://www.newsis.com/view/NISX20261115_0003868472","priceLabel":"언론 보도"},{"b":"스타벅스","n":"조선델리 위시 스노우맨 케이크","d":"마스카포네 크림과 레드벨벳 시트로 만든 눈사람 케이크.","tags":["레드벨벳","캐릭터"],"badge":"호텔 협업","soldout":false,"extra":false,"price":79000,"pre":71100,"preLabel":"리워드 예약가(~11/26)","size":"지름 14cm","note":null,"imgPage":"https://www.starbucks.co.kr/menu/food_view.do?product_cd=9300000006951","imgLabel":"공식 홈페이지","priceSrc":"https://www.diarypoint.com/news/articleView.html?idxno=7194","priceLabel":"언론 보도"},{"b":"스타벅스","n":"트리 베어리 오너먼트 케이크","d":"베어리스타를 오너먼트로 표현. 키링으로 쓸 수 있는 한정 오너먼트 증정.","tags":["캐릭터"],"badge":null,"soldout":false,"extra":false,"price":49000,"pre":44100,"preLabel":"리워드 예약가(~11/26)","size":"지름 14cm","note":null,"imgPage":"https://www.starbucks.co.kr/menu/food_view.do?product_cd=9300000006953","imgLabel":"공식 홈페이지","priceSrc":"https://www.diarypoint.com/news/articleView.html?idxno=7194","priceLabel":"언론 보도"},{"b":"스타벅스","n":"헬로키티 굴뚝쿠헨","d":"산타 모자를 쓴 헬로키티가 굴뚝으로 선물을 배달하는 바움쿠헨 케이크. 속은 슈크림과 딸기.","tags":["캐릭터"],"badge":null,"soldout":false,"extra":false,"price":49000,"pre":44100,"preLabel":"리워드 예약가(~11/26)","size":"높이 17cm","note":null,"imgPage":"https://www.starbucks.co.kr/menu/food_view.do?product_cd=9300000006954","imgLabel":"공식 홈페이지","priceSrc":"https://www.diarypoint.com/news/articleView.html?idxno=7194","priceLabel":"언론 보도"},{"b":"스타벅스","n":"스노우 딸기 치즈 케이크","d":"딸기 콩포트를 더한 바스크 치즈 케이크. 케이크 서버 포함.","tags":["딸기","치즈"],"badge":null,"soldout":false,"extra":false,"price":55000,"pre":49500,"preLabel":"리워드 예약가(~11/26)","size":"19.5×13.5cm 사각","note":null,"imgPage":"https://www.starbucks.co.kr/menu/food_view.do?product_cd=9300000006952","imgLabel":"공식 홈페이지","priceSrc":"https://www.diarypoint.com/news/articleView.html?idxno=7194","priceLabel":"언론 보도"},{"b":"스타벅스","n":"딸기 촉촉 초콜릿 생크림 케이크","d":"스타벅스 시그니처 케이크를 크리스마스 홀케이크로.","tags":["딸기","초코","생크림"],"badge":null,"soldout":false,"extra":false,"price":45000,"pre":40500,"preLabel":"리워드 예약가(~11/26)","size":"지름 15cm","note":null,"imgPage":"https://www.starbucks.co.kr/menu/food_view.do?product_cd=9300000006287","imgLabel":"공식 홈페이지","priceSrc":"https://www.diarypoint.com/news/articleView.html?idxno=7194","priceLabel":"언론 보도"},{"b":"스타벅스","n":"헬로키티 초코 트리 바움쿠헨","d":"온라인 스토어·선물하기 전용 바움쿠헨.","tags":["초코","캐릭터","트리"],"badge":null,"soldout":false,"extra":false,"price":39000,"pre":35100,"preLabel":"온라인 2차 예약가(11/30~)","size":null,"note":"온라인 스토어·선물하기 전용, 트리 캔들 증정","imgPage":"https://onlinestore.starbucks.co.kr/goods/1006086","imgLabel":"공식 온라인스토어","priceSrc":"https://onlinestore.starbucks.co.kr/goods/1006086","priceLabel":"공식 온라인스토어"},{"b":"스타벅스","n":"크리스마스 트리바움쿠헨","d":"부드러운 바움쿠헨 속에 바닐라빈 슈크림을 채운 트리 모양 케이크로, 동봉된 별 모양 픽으로 트리를 완성해요.","tags":["트리"],"badge":"온라인 전용","soldout":false,"extra":true,"price":36000,"pre":32400,"preLabel":"온라인 2차 예약가(11/30~)","size":"450g","note":"온라인 스토어 전용, 트리 캔들 증정","imgPage":"https://onlinestore.starbucks.co.kr/goods/1006085","imgLabel":"공식 온라인스토어","priceSrc":"https://onlinestore.starbucks.co.kr/goods/1006085","priceLabel":"공식 온라인스토어"},{"b":"스타벅스","n":"스노우베리 치즈 아이스크림 케이크","d":"스트로베리 치즈케이크 아이스크림에 상큼한 딸기 소스와 바삭한 쿠키 조각을 더한 크리스마스 한정 아이스크림 케이크예요.","tags":["딸기","치즈","아이스크림"],"badge":"온라인 전용","soldout":false,"extra":true,"price":49900,"pre":null,"preLabel":null,"size":"705g","note":"온라인 스토어 전용 · 11/30 오픈","imgPage":"https://onlinestore.starbucks.co.kr/goods/1006125","imgLabel":"공식 온라인스토어","priceSrc":"https://onlinestore.starbucks.co.kr/goods/1006125","priceLabel":"공식 온라인스토어"},{"b":"파스쿠찌","n":"크리스탈 스완","d":"카페 스와로브스키 협업. 화이트 초콜릿 무스에 바닐라 글레이즈, 레몬 젤리, 핑크 스완 초콜릿.","tags":["무스"],"badge":"예약 한정","soldout":false,"extra":false,"price":53000,"pre":39750,"preLabel":"카카오 예약하기(~12/13)","size":"지름 13cm","note":"사전예약 한정 · 냉동 제공","imgPage":"https://www.mirae-biz.com/news/articleView.html?idxno=113022","imgLabel":"보도자료 사진","priceSrc":"https://www.pascucci.co.kr/event/eventView.asp?teSeq=1045","priceLabel":"공식 홈페이지"},{"b":"파스쿠찌","n":"미라클 스노우 트리","d":"트리 모양 화이트 크림 케이크에 라즈베리 콤포트와 치즈 무스.","tags":["생크림","치즈","트리"],"badge":null,"soldout":false,"extra":false,"price":45000,"pre":33750,"preLabel":"해피오더 예약가","size":"지름 14cm","note":null,"imgPage":"https://www.pascucci.co.kr/product/productList.asp?typeCode=00210020&productSeq=3681","imgLabel":"공식 홈페이지","priceSrc":"https://www.pascucci.co.kr/product/productList.asp?typeCode=00210020&productSeq=3681","priceLabel":"공식 홈페이지"},{"b":"파스쿠찌","n":"메리 베리 레드","d":"라즈베리·리치 콤포트와 바닐라 마스카포네 크림의 딸기 케이크.","tags":["딸기"],"badge":null,"soldout":false,"extra":false,"price":43000,"pre":32250,"preLabel":"해피오더 예약가","size":"지름 18cm","note":"매장 판매는 12/4부터","imgPage":"https://www.pascucci.co.kr/product/productList.asp?typeCode=00210020&productSeq=3684","imgLabel":"공식 홈페이지","priceSrc":"https://www.pascucci.co.kr/product/productList.asp?typeCode=00210020&productSeq=3684","priceLabel":"공식 홈페이지"},{"b":"파스쿠찌","n":"메리 베리 초코","d":"초코 시트와 초코 생크림에 체리 콤포트, 윗면은 딸기 장식.","tags":["초코","생크림"],"badge":null,"soldout":false,"extra":false,"price":43000,"pre":32250,"preLabel":"해피오더 예약가","size":"지름 18cm","note":"매장 판매는 12/4부터","imgPage":"https://www.pascucci.co.kr/product/productList.asp?typeCode=00210020&productSeq=3685","imgLabel":"공식 홈페이지","priceSrc":"https://www.pascucci.co.kr/product/productList.asp?typeCode=00210020&productSeq=3685","priceLabel":"공식 홈페이지"},{"b":"파스쿠찌","n":"리틀 스노우 산타","d":"초콜릿 생크림, 카라멜 소스, 초코 프레첼 볼을 넣은 산타 케이크.","tags":["초코","캐릭터"],"badge":null,"soldout":false,"extra":false,"price":39000,"pre":29250,"preLabel":"해피오더 예약가","size":"지름 15cm","note":null,"imgPage":"https://www.pascucci.co.kr/product/productList.asp?typeCode=00210020&productSeq=3683","imgLabel":"공식 홈페이지","priceSrc":"https://www.pascucci.co.kr/product/productList.asp?typeCode=00210020&productSeq=3683","priceLabel":"공식 홈페이지"},{"b":"파스쿠찌","n":"레드 루돌프","d":"베리 콤포트와 블루베리를 넣은 루돌프 모양 화이트 초콜릿 무스.","tags":["무스","캐릭터"],"badge":null,"soldout":false,"extra":false,"price":43000,"pre":32250,"preLabel":"해피오더 예약가","size":"지름 15cm","note":null,"imgPage":"https://www.pascucci.co.kr/product/productList.asp?typeCode=00210020&productSeq=3682","imgLabel":"공식 홈페이지","priceSrc":"https://www.pascucci.co.kr/product/productList.asp?typeCode=00210020&productSeq=3682","priceLabel":"공식 홈페이지"},{"b":"뚜레쥬르","n":"홀리데이 스트로베리 퀸","d":"인기 '스트로베리 퀸'의 홀리데이 버전. 불을 끄면 빛나는 야광 장식.","tags":["딸기","생크림"],"badge":null,"soldout":false,"extra":false,"price":38000,"pre":30400,"preLabel":"앱 예약가","size":"815g","note":"멤버십 쿠폰 적용 시 27,400원","imgPage":"https://www.tlj.co.kr/product/detail.asp?gubun=new&prod_num=5639","imgLabel":"공식 홈페이지","priceSrc":"https://gift.kakao.com/product/14637144","priceLabel":"카카오 공식 브랜드관"},{"b":"뚜레쥬르","n":"홀리데이 블랙 퀸","d":"초코 시트 사이 딸기 쿨리, 생딸기를 올린 초코 생크림 케이크.","tags":["딸기","초코","생크림"],"badge":null,"soldout":false,"extra":false,"price":38000,"pre":30400,"preLabel":"앱 예약가","size":"785g","note":"멤버십 쿠폰 적용 시 27,400원","imgPage":"https://www.tlj.co.kr/product/detail.asp?gubun=new&prod_num=5640","imgLabel":"공식 홈페이지","priceSrc":"https://gift.kakao.com/product/14637156","priceLabel":"카카오 공식 브랜드관"},{"b":"뚜레쥬르","n":"첫눈에 반했곰","d":"초코·바닐라 무스를 초콜릿으로 코팅한 아기 곰 오브제 케이크.","tags":["무스","초코","캐릭터"],"badge":null,"soldout":false,"extra":false,"price":35000,"pre":27650,"preLabel":"카카오 선물하기","size":"330g","note":null,"imgPage":"https://www.tlj.co.kr/product/detail.asp?gubun=new&prod_num=5667","imgLabel":"공식 홈페이지","priceSrc":"https://gift.kakao.com/product/14677535","priceLabel":"카카오 공식 브랜드관"},{"b":"뚜레쥬르","n":"홀리데이 트리","d":"눈 내린 듯 새하얀 트리 모양 케이크 안에 상큼한 딸기 꿀리와 베리 크림을 샌드한 케이크.","tags":["트리","딸기"],"badge":null,"soldout":false,"extra":true,"price":38000,"pre":null,"preLabel":null,"size":"732g","note":"앱 사전예약 최대 30% 할인 대상","imgPage":"https://www.tlj.co.kr/product/detail.asp?gubun=new&prod_num=5641","imgLabel":"공식 홈페이지","priceSrc":"https://gift.kakao.com/product/14652053","priceLabel":"카카오 공식 브랜드관"},{"b":"뚜레쥬르","n":"트윙클 눈꽃 리스","d":"상큼한 복숭아와 치즈무스로 맛을 내고 반짝이는 눈꽃과 오너먼트를 올린 리스 모양 케이크.","tags":["치즈","무스"],"badge":null,"soldout":false,"extra":true,"price":38000,"pre":null,"preLabel":null,"size":"700g","note":"앱 사전예약 최대 30% 할인 대상","imgPage":"https://www.tlj.co.kr/product/detail.asp?gubun=new&prod_num=5642","imgLabel":"공식 홈페이지","priceSrc":"https://gift.kakao.com/product/14652052","priceLabel":"카카오 공식 브랜드관"},{"b":"뚜레쥬르","n":"라이팅 하프 앤 하프","d":"가로등 아래 눈 굴리는 눈사람 장식을 올린 딸기 반, 초코 반 하프 앤 하프 케이크.","tags":["딸기","초코"],"badge":null,"soldout":false,"extra":true,"price":35000,"pre":null,"preLabel":null,"size":"619g","note":"앱 사전예약 최대 30% 할인 대상","imgPage":"https://www.tlj.co.kr/product/detail.asp?gubun=new&prod_num=5643","imgLabel":"공식 홈페이지","priceSrc":"https://gift.kakao.com/product/14652050","priceLabel":"카카오 공식 브랜드관"},{"b":"뚜레쥬르","n":"홀리데이 라이트 온","d":"케이크 위에 반짝이는 트리 장식을 올리고 말차 크림과 가나슈로 진한 맛을 더한 시즌 케이크.","tags":["트리","초코"],"badge":null,"soldout":false,"extra":true,"price":32000,"pre":null,"preLabel":null,"size":"710g","note":"앱 사전예약 최대 30% 할인 대상","imgPage":"https://www.tlj.co.kr/product/detail.asp?gubun=new&prod_num=5644","imgLabel":"공식 홈페이지","priceSrc":"https://gift.kakao.com/product/14652049","priceLabel":"카카오 공식 브랜드관"},{"b":"뚜레쥬르","n":"핫! 산타","d":"상큼한 라즈베리와 달콤한 카라멜 크림을 샌드한 산타 모양 캐릭터 케이크.","tags":["캐릭터"],"badge":null,"soldout":false,"extra":true,"price":29000,"pre":null,"preLabel":null,"size":"710g","note":"앱 사전예약 최대 30% 할인 대상","imgPage":"https://www.tlj.co.kr/product/detail.asp?gubun=new&prod_num=5645","imgLabel":"공식 홈페이지","priceSrc":"https://gift.kakao.com/product/14652048","priceLabel":"카카오 공식 브랜드관"},{"b":"뚜레쥬르","n":"힙! 루돌프","d":"달콤한 초코 크림에 진한 가나슈를 샌드하고 선글라스를 씌운 루돌프 모양 캐릭터 케이크.","tags":["캐릭터","초코"],"badge":null,"soldout":false,"extra":true,"price":28000,"pre":null,"preLabel":null,"size":"550g","note":"앱 사전예약 최대 30% 할인 대상","imgPage":"https://www.tlj.co.kr/product/detail.asp?gubun=new&prod_num=5647","imgLabel":"공식 홈페이지","priceSrc":"https://gift.kakao.com/product/14652016","priceLabel":"카카오 공식 브랜드관"},{"b":"뚜레쥬르","n":"짠! 눈사람","d":"핫! 산타·힙! 루돌프와 같은 캐릭터 라인의 눈사람 모양 케이크.","tags":["캐릭터"],"badge":null,"soldout":false,"extra":true,"price":29000,"pre":null,"preLabel":null,"size":null,"note":"앱 사전예약 최대 30% 할인 대상","imgPage":"https://www.tlj.co.kr/microsite/2026/holiday/intro.asp","imgLabel":"공식 홈페이지","priceSrc":"https://gift.kakao.com/product/14652029","priceLabel":"카카오 공식 브랜드관"},{"b":"팀홀튼","n":"윈터 스노우 캐빈","d":"초콜릿 케이크에 크림·마시멜로 지붕과 불빛을 더한 눈 덮인 캐나다 오두막.","tags":["초코"],"badge":"대표","soldout":false,"extra":false,"price":35000,"pre":29750,"preLabel":"1차 예약가(~11/30)","size":"14×11×13cm","note":null,"imgPage":"https://www.tim-hortons.co.kr/ORD0101/13000000","imgLabel":"공식 홈페이지","priceSrc":"https://www.tim-hortons.co.kr/ORD0101/13000000","priceLabel":"공식 홈페이지"},{"b":"팀홀튼","n":"헤이즐넛 초콜릿 무스 무스","d":"캐나다 동물 무스(Moose) 모양의 헤이즐넛 초콜릿 무스.","tags":["초코","무스","캐릭터"],"badge":null,"soldout":false,"extra":false,"price":28000,"pre":23800,"preLabel":"1차 예약가(~11/30)","size":"12×16×6.5cm","note":null,"imgPage":"https://www.tim-hortons.co.kr/ORD0101/13000000","imgLabel":"공식 홈페이지","priceSrc":"https://www.tim-hortons.co.kr/ORD0101/13000000","priceLabel":"공식 홈페이지"},{"b":"팀홀튼","n":"베리 포레스트 생크림","d":"제철 딸기를 올린 생크림 케이크.","tags":["딸기","생크림"],"badge":null,"soldout":false,"extra":false,"price":37000,"pre":31450,"preLabel":"1차 예약가(~11/30)","size":"지름 약 17cm","note":null,"imgPage":"https://www.tim-hortons.co.kr/ORD0101/13000000","imgLabel":"공식 홈페이지","priceSrc":"https://www.tim-hortons.co.kr/ORD0101/13000000","priceLabel":"공식 홈페이지"},{"b":"팀홀튼","n":"생딸기 바스크 치즈","d":"바스크 치즈케이크에 생딸기.","tags":["딸기","치즈"],"badge":null,"soldout":false,"extra":false,"price":27000,"pre":22950,"preLabel":"1차 예약가(~11/30)","size":"지름 약 12cm","note":null,"imgPage":"https://www.tim-hortons.co.kr/ORD0101/13000000","imgLabel":"공식 홈페이지","priceSrc":"https://www.tim-hortons.co.kr/ORD0101/13000000","priceLabel":"공식 홈페이지"},{"b":"팀홀튼","n":"베리 바닐라 비스킷 케이크","d":"비스킷 모양 바닐라 무스 속 베리 콩포트.","tags":["무스"],"badge":null,"soldout":false,"extra":false,"price":28000,"pre":23800,"preLabel":"1차 예약가(~11/30)","size":"11×7×4.5cm","note":null,"imgPage":"https://www.tim-hortons.co.kr/ORD0101/13000000","imgLabel":"공식 홈페이지","priceSrc":"https://www.tim-hortons.co.kr/ORD0101/13000000","priceLabel":"공식 홈페이지"},{"b":"파리바게뜨","n":"베리밤","d":"케이크 전체를 생딸기로 감싼 바닐라빈 커스터드 생크림 케이크. MERRY 데코픽 포함 홀리데이 버전.","tags":["딸기","생크림"],"badge":"시그니처","soldout":false,"extra":false,"price":43000,"pre":34400,"preLabel":"카카오 예약하기","size":"13.5cm","note":"데코픽 없는 일반 베리밤은 42,000원","imgPage":"https://gift.kakao.com/product/14618795","imgLabel":"카카오 공식 브랜드관","priceSrc":"https://gift.kakao.com/product/14618795","priceLabel":"카카오 공식 브랜드관"},{"b":"파리바게뜨","n":"베리밤 와르르","d":"치즈크림 케이크 위에 생딸기를 풍성하게. 올해 신제품.","tags":["딸기","치즈"],"badge":"NEW","soldout":false,"extra":false,"price":42000,"pre":33600,"preLabel":"카카오 예약하기","size":"13cm","note":"파바앱 최대 30% 시 29,400원","imgPage":"https://gift.kakao.com/product/14618023","imgLabel":"카카오 공식 브랜드관","priceSrc":"https://gift.kakao.com/product/14618023","priceLabel":"카카오 공식 브랜드관"},{"b":"파리바게뜨","n":"베리밤 파티","d":"딸기 콤포트를 샌드한 2단 케이크. 모임용.","tags":["딸기"],"badge":"NEW","soldout":false,"extra":false,"price":53000,"pre":42400,"preLabel":"카카오 예약하기","size":"14.5cm 2단","note":null,"imgPage":"https://gift.kakao.com/product/14618262","imgLabel":"카카오 공식 브랜드관","priceSrc":"https://gift.kakao.com/product/14618262","priceLabel":"카카오 공식 브랜드관"},{"b":"파리바게뜨","n":"베리밤 레드","d":"레드 시트에 딸기 콤포트.","tags":["딸기","레드벨벳"],"badge":null,"soldout":false,"extra":false,"price":43000,"pre":34400,"preLabel":"카카오 예약하기","size":"14.5cm","note":null,"imgPage":"https://gift.kakao.com/product/14618279","imgLabel":"카카오 공식 브랜드관","priceSrc":"https://gift.kakao.com/product/14618279","priceLabel":"카카오 공식 브랜드관"},{"b":"파리바게뜨","n":"베리밤 초코","d":"초코 시트와 초코칩 가나슈 크림.","tags":["딸기","초코"],"badge":null,"soldout":false,"extra":false,"price":43000,"pre":34400,"preLabel":"카카오 예약하기","size":"14.5cm","note":"파바앱 최대 30% 시 30,100원","imgPage":"https://gift.kakao.com/product/14618536","imgLabel":"카카오 공식 브랜드관","priceSrc":"https://gift.kakao.com/product/14618536","priceLabel":"카카오 공식 브랜드관"},{"b":"파리바게뜨","n":"베리밤 딥초코","d":"진한 초콜릿 풍미와 꾸덕한 식감.","tags":["딸기","초코"],"badge":null,"soldout":false,"extra":false,"price":33000,"pre":null,"preLabel":null,"size":"480g","note":"별도 '케이크 3종 사전예약' 상품 (12/4~12/19 픽업)","imgPage":"https://www.paris.co.kr/product/berry-bomb-deep-choco/","imgLabel":"공식 홈페이지","priceSrc":"https://gift.kakao.com/product/14613257","priceLabel":"카카오 공식 브랜드관"},{"b":"파리바게뜨","n":"기적같은 오늘","d":"블루베리 콤포트와 바닐라 크림, 빨간 리본 초를 더한 프리미엄 트리 케이크.","tags":["트리"],"badge":null,"soldout":false,"extra":false,"price":39000,"pre":31200,"preLabel":"카카오 예약하기","size":"16cm","note":"파바앱 최대 30% 시 27,300원","imgPage":"https://gift.kakao.com/product/14618052","imgLabel":"카카오 공식 브랜드관","priceSrc":"https://gift.kakao.com/product/14618052","priceLabel":"카카오 공식 브랜드관"},{"b":"파리바게뜨","n":"위싱트리","d":"바닐라 치즈크림과 딸기 콤포트의 입체 트리 케이크.","tags":["트리","치즈","딸기"],"badge":null,"soldout":false,"extra":false,"price":39000,"pre":31200,"preLabel":"카카오 예약하기","size":"18cm","note":null,"imgPage":"https://gift.kakao.com/product/14618184","imgLabel":"카카오 공식 브랜드관","priceSrc":"https://gift.kakao.com/product/14618184","priceLabel":"카카오 공식 브랜드관"},{"b":"파리바게뜨","n":"윈터무스","d":"바닐라 무스와 초코 시트, 커피 쿠키를 넣은 쌉쌀한 초코 무스.","tags":["무스","초코"],"badge":null,"soldout":false,"extra":false,"price":24000,"pre":21600,"preLabel":"카카오 예약하기","size":"11cm","note":null,"imgPage":"https://gift.kakao.com/product/14618216","imgLabel":"카카오 공식 브랜드관","priceSrc":"https://gift.kakao.com/product/14618216","priceLabel":"카카오 공식 브랜드관"},{"b":"파리바게뜨","n":"눈꽃무스","d":"바닐라 무스에 딸기 무스와 치즈 큐브.","tags":["무스","딸기","치즈"],"badge":null,"soldout":false,"extra":false,"price":43000,"pre":34400,"preLabel":"카카오 예약하기","size":"18.5cm","note":null,"imgPage":"https://gift.kakao.com/product/14618259","imgLabel":"카카오 공식 브랜드관","priceSrc":"https://gift.kakao.com/product/14618259","priceLabel":"카카오 공식 브랜드관"},{"b":"파리바게뜨","n":"초코베리 요정","d":"초코와 딸기를 한 번에 즐기는 캐릭터 케이크.","tags":["초코","딸기","캐릭터"],"badge":null,"soldout":false,"extra":false,"price":39000,"pre":31200,"preLabel":"카카오 예약하기","size":"18.5cm","note":null,"imgPage":"https://gift.kakao.com/product/14618042","imgLabel":"카카오 공식 브랜드관","priceSrc":"https://gift.kakao.com/product/14618042","priceLabel":"카카오 공식 브랜드관"},{"b":"파리바게뜨","n":"루돌프 사슴코","d":"크런치 토핑을 올린 입체 초코 크림 케이크.","tags":["초코","캐릭터"],"badge":null,"soldout":false,"extra":false,"price":38000,"pre":30400,"preLabel":"카카오 예약하기","size":"18.5cm","note":null,"imgPage":"https://gift.kakao.com/product/14618054","imgLabel":"카카오 공식 브랜드관","priceSrc":"https://gift.kakao.com/product/14618054","priceLabel":"카카오 공식 브랜드관"},{"b":"파리바게뜨","n":"초코홀릭쉬폰","d":"폭신한 초코 쉬폰에 진한 초코 크림.","tags":["초코"],"badge":null,"soldout":false,"extra":false,"price":38000,"pre":30400,"preLabel":"카카오 예약하기","size":"15cm","note":null,"imgPage":"https://gift.kakao.com/product/14618193","imgLabel":"카카오 공식 브랜드관","priceSrc":"https://gift.kakao.com/product/14618193","priceLabel":"카카오 공식 브랜드관"},{"b":"파리바게뜨","n":"깜짝 눈사람","d":"눈사람 장식의 레제르 크림 케이크. 실속형.","tags":["생크림","캐릭터"],"badge":"실속","soldout":false,"extra":false,"price":28000,"pre":25200,"preLabel":"카카오 예약하기","size":"13cm","note":null,"imgPage":"https://gift.kakao.com/product/14618169","imgLabel":"카카오 공식 브랜드관","priceSrc":"https://gift.kakao.com/product/14618169","priceLabel":"카카오 공식 브랜드관"},{"b":"파리바게뜨","n":"깜짝 루돌프","d":"초코칩 초코 시트와 크림, 루돌프 얼굴 장식. 실속형.","tags":["초코","캐릭터"],"badge":"실속","soldout":false,"extra":false,"price":28000,"pre":25200,"preLabel":"카카오 예약하기","size":"13cm","note":null,"imgPage":"https://gift.kakao.com/product/14618045","imgLabel":"카카오 공식 브랜드관","priceSrc":"https://gift.kakao.com/product/14618045","priceLabel":"카카오 공식 브랜드관"},{"b":"파리바게뜨","n":"라이언 산타","d":"이글루 속 카카오프렌즈 라이언. 카카오톡 선물하기 전용.","tags":["캐릭터"],"badge":null,"soldout":false,"extra":false,"price":39000,"pre":32900,"preLabel":"카카오 선물하기","size":"520g","note":"카카오톡 선물하기 전용","imgPage":"https://gift.kakao.com/product/14576669","imgLabel":"카카오 공식 브랜드관","priceSrc":"https://gift.kakao.com/product/14576669","priceLabel":"카카오 공식 브랜드관"},{"b":"파리바게뜨","n":"생크림 샤르르(산타)","d":"딸기와 산타 장식, HAPPY HOLIDAY 픽을 올린 생크림 케이크로 미니·1호·2호로 나온다.","tags":["딸기","생크림","캐릭터"],"badge":null,"soldout":false,"extra":true,"price":36000,"pre":30600,"preLabel":"카카오 예약하기(1호)","size":"1호","note":"미니 32,000원 · 2호 40,000원","imgPage":"https://gift.kakao.com/product/14647692","imgLabel":"카카오 공식 브랜드관","priceSrc":"https://gift.kakao.com/product/14618285","priceLabel":"카카오 공식 브랜드관"},{"b":"파리바게뜨","n":"파베 생초콜릿 케이크","d":"진한 브라우니 식감의 초코시트와 생초콜릿 무스가 어우러진 프리미엄 초코 무스 케이크.","tags":["초코","무스"],"badge":null,"soldout":false,"extra":true,"price":39000,"pre":null,"preLabel":null,"size":"530g","note":"별도 '케이크 3종 사전예약' 상품","imgPage":"https://www.paris.co.kr/product/pave-chocolate-cake-2/","imgLabel":"공식 홈페이지","priceSrc":"https://gift.kakao.com/product/14459464","priceLabel":"카카오 공식 브랜드관"},{"b":"파리바게뜨","n":"홀리데이 우유퐁당 생크림","d":"우유 생크림 케이크에 생딸기와 HAPPY HOLIDAY 픽을 올린 홀리데이 버전.","tags":["딸기","생크림"],"badge":null,"soldout":false,"extra":true,"price":36000,"pre":30600,"preLabel":"카카오 예약하기(1호)","size":"1호 15cm","note":"2호(18cm) 39,900원","imgPage":"https://gift.kakao.com/product/14618899","imgLabel":"카카오 공식 브랜드관","priceSrc":"https://gift.kakao.com/product/14618899","priceLabel":"카카오 공식 브랜드관"},{"b":"파리바게뜨","n":"홀리데이 마이넘버원","d":"6가지 맛 조각을 한 판에 담은 마이넘버원 케이크의 홀리데이 버전.","tags":["딸기","초코","생크림"],"badge":null,"soldout":false,"extra":true,"price":37000,"pre":31450,"preLabel":"카카오 예약하기","size":"18cm","note":null,"imgPage":"https://gift.kakao.com/product/14618843","imgLabel":"카카오 공식 브랜드관","priceSrc":"https://gift.kakao.com/product/14618843","priceLabel":"카카오 공식 브랜드관"},{"b":"파리바게뜨","n":"홀리데이 초코반 딸기반","d":"초코 케이크와 딸기 생크림 케이크를 반씩 담은 반반 케이크의 홀리데이 버전.","tags":["딸기","초코","생크림"],"badge":null,"soldout":false,"extra":true,"price":36500,"pre":31020,"preLabel":"카카오 예약하기","size":"18cm","note":null,"imgPage":"https://gift.kakao.com/product/14618917","imgLabel":"카카오 공식 브랜드관","priceSrc":"https://gift.kakao.com/product/14618917","priceLabel":"카카오 공식 브랜드관"},{"b":"파리바게뜨","n":"헌트릭스 골든 케이크","d":"초코칩 초코 크림과 바나나 크림을 채운 케이팝 데몬 헌터스 콜라보 초코 바나나 생크림 케이크.","tags":["초코","생크림","캐릭터"],"badge":null,"soldout":false,"extra":true,"price":29000,"pre":26100,"preLabel":"카카오 예약하기","size":"13cm","note":null,"imgPage":"https://gift.kakao.com/product/14619247","imgLabel":"카카오 공식 브랜드관","priceSrc":"https://gift.kakao.com/product/14619247","priceLabel":"카카오 공식 브랜드관"},{"b":"배스킨라빈스","n":"팡팡 홀리데이","d":"크리스마스 아이스크림 케이크.","tags":["아이스크림"],"badge":null,"soldout":false,"extra":false,"price":31000,"pre":23900,"preLabel":"해피오더 예약가","size":null,"note":null,"imgPage":"https://www.baskinrobbins.co.kr/menu/view.php?seq=1215","imgLabel":"공식 홈페이지","priceSrc":"https://www.baskinrobbins.co.kr/play/event/view.php?seq=650","priceLabel":"공식 홈페이지"},{"b":"배스킨라빈스","n":"스노우 모찌 트리","d":"쫀득한 모찌와 아이스크림을 3단으로 쌓은 트리.","tags":["아이스크림","트리"],"badge":null,"soldout":false,"extra":false,"price":36000,"pre":32400,"preLabel":"해피오더 예약가","size":null,"note":null,"imgPage":"https://www.baskinrobbins.co.kr/menu/view.php?seq=1207","imgLabel":"공식 홈페이지","priceSrc":"https://www.baskinrobbins.co.kr/menu/view.php?seq=1207","priceLabel":"공식 홈페이지"},{"b":"배스킨라빈스","n":"트윙클 베리 트리","d":"딸기 샤베트를 넣은 초록 트리 모양 케이크.","tags":["아이스크림","딸기","트리"],"badge":null,"soldout":false,"extra":false,"price":36000,"pre":30600,"preLabel":"해피오더 예약가","size":null,"note":null,"imgPage":"https://www.baskinrobbins.co.kr/menu/view.php?seq=1208","imgLabel":"공식 홈페이지","priceSrc":"https://www.baskinrobbins.co.kr/menu/view.php?seq=1208","priceLabel":"공식 홈페이지"},{"b":"배스킨라빈스","n":"더 바삭 스트로베리 쇼콜라","d":"초코 코팅 와플과 밀크·화이트 초코볼로 바삭한 식감.","tags":["아이스크림","초코","딸기"],"badge":null,"soldout":false,"extra":false,"price":34000,"pre":28900,"preLabel":"해피오더 예약가","size":null,"note":null,"imgPage":"https://www.baskinrobbins.co.kr/menu/view.php?seq=1213","imgLabel":"공식 홈페이지","priceSrc":"https://www.baskinrobbins.co.kr/menu/view.php?seq=1213","priceLabel":"공식 홈페이지"},{"b":"배스킨라빈스","n":"산타의 초코 하우스","d":"산타와 프레첼 장식을 올린 숲속 초코 과자집 모양의 아이스크림 케이크예요.","tags":["아이스크림","초코","캐릭터"],"badge":null,"soldout":false,"extra":true,"price":34000,"pre":27200,"preLabel":"해피오더 예약가","size":null,"note":null,"imgPage":"https://www.baskinrobbins.co.kr/menu/view.php?seq=1214","imgLabel":"공식 홈페이지","priceSrc":"https://www.baskinrobbins.co.kr/menu/view.php?seq=1214","priceLabel":"공식 홈페이지"},{"b":"배스킨라빈스","n":"홀리데이 기프트 와츄원","d":"9가지 맛 아이스크림 위에 산타와 선물 상자 모양 과일 샤베트를 올린 골라 먹는 와츄원 케이크예요.","tags":["아이스크림","캐릭터"],"badge":null,"soldout":false,"extra":true,"price":36000,"pre":30600,"preLabel":"해피오더 예약가","size":null,"note":null,"imgPage":"https://www.baskinrobbins.co.kr/menu/view.php?seq=1216","imgLabel":"공식 홈페이지","priceSrc":"https://www.baskinrobbins.co.kr/menu/view.php?seq=1216","priceLabel":"공식 홈페이지"},{"b":"배스킨라빈스","n":"스노우 윈터 타운 와츄원","d":"9가지 맛 큐브 아이스크림에 스노우 볼과 트리 바이트를 올린 겨울 마을 콘셉트 와츄원 케이크예요.","tags":["아이스크림","트리"],"badge":null,"soldout":false,"extra":true,"price":36000,"pre":30600,"preLabel":"해피오더 예약가","size":null,"note":null,"imgPage":"https://www.baskinrobbins.co.kr/menu/view.php?seq=1210","imgLabel":"공식 홈페이지","priceSrc":"https://www.baskinrobbins.co.kr/menu/view.php?seq=1210","priceLabel":"공식 홈페이지"},{"b":"배스킨라빈스","n":"스퀘어 크런치 와츄원","d":"다양한 맛의 스퀘어 바이트에 바삭한 크런치 레이어드 바이트를 더한 조각형 와츄원 케이크예요.","tags":["아이스크림"],"badge":null,"soldout":false,"extra":true,"price":37000,"pre":29600,"preLabel":"해피오더 예약가","size":null,"note":null,"imgPage":"https://www.baskinrobbins.co.kr/menu/view.php?seq=1211","imgLabel":"공식 홈페이지","priceSrc":"https://www.baskinrobbins.co.kr/menu/view.php?seq=1211","priceLabel":"공식 홈페이지"},{"b":"배스킨라빈스","n":"쿠키 샌드 와츄원","d":"별 모양 아이스크림 쿠키 샌드를 트리처럼 쌓아 올린 와츄원 케이크예요.","tags":["아이스크림","트리"],"badge":null,"soldout":false,"extra":true,"price":35000,"pre":30000,"preLabel":"해피오더 예약가","size":null,"note":null,"imgPage":"https://www.baskinrobbins.co.kr/menu/view.php?seq=1212","imgLabel":"공식 홈페이지","priceSrc":"https://www.baskinrobbins.co.kr/menu/view.php?seq=1212","priceLabel":"공식 홈페이지"},{"b":"배스킨라빈스","n":"더 듬뿍 초코 앤 스트로베리","d":"눈 내린 듯한 초코 크림 위에 아삭한 딸기 샤베트를 듬뿍 올린 원형 케이크예요.","tags":["아이스크림","딸기","초코"],"badge":null,"soldout":false,"extra":true,"price":34000,"pre":30600,"preLabel":"해피오더 예약가","size":null,"note":null,"imgPage":"https://www.baskinrobbins.co.kr/menu/view.php?seq=1209","imgLabel":"공식 홈페이지","priceSrc":"https://www.baskinrobbins.co.kr/menu/view.php?seq=1209","priceLabel":"공식 홈페이지"},{"b":"투썸플레이스","n":"크초생 (크림탑 스초생)","d":"스초생에 바닐라빈 크림을 얹은 신제품.","tags":["딸기","초코","생크림"],"badge":"NEW","soldout":false,"extra":false,"price":42000,"pre":37800,"preLabel":"앱 예약가","size":"1호 14.5cm","note":null,"imgPage":"https://mo.twosome.co.kr/mn/menuInfoDetail.do?menuCd=30702597","imgLabel":"공식 홈페이지","priceSrc":"https://mo.twosome.co.kr/ev/eventCakeDtl.do?annoSeqNo=261111","priceLabel":"공식 홈페이지"},{"b":"투썸플레이스","n":"스초생","d":"누적 1,520만 개 판매된 투썸 대표 딸기 초코 생크림 케이크.","tags":["딸기","초코","생크림"],"badge":null,"soldout":false,"extra":false,"price":39000,"pre":35100,"preLabel":"앱 예약가","size":"1호 14.5cm","note":null,"imgPage":"https://mo.twosome.co.kr/mn/menuInfoDetail.do?menuCd=30701708","imgLabel":"공식 홈페이지","priceSrc":"https://mo.twosome.co.kr/ev/eventCakeDtl.do?annoSeqNo=261111","priceLabel":"공식 홈페이지"},{"b":"투썸플레이스","n":"패딩 베어","d":"패딩 입은 곰 모양 무스. 초코크림, 초코볼, 베리 무스.","tags":["무스","초코","캐릭터"],"badge":"대표","soldout":false,"extra":false,"price":39000,"pre":33150,"preLabel":"앱 예약가","size":"1호 14×16cm","note":null,"imgPage":"https://mo.twosome.co.kr/mn/menuInfoDetail.do?menuCd=30702612","imgLabel":"공식 홈페이지","priceSrc":"https://mo.twosome.co.kr/ev/eventCakeDtl.do?annoSeqNo=261111","priceLabel":"공식 홈페이지"},{"b":"투썸플레이스","n":"스트로베리 썰매","d":"아몬드 바닐라 무스에 딸기 콤포트를 샌드하고 생딸기를 실은 화이트 썰매 케이크.","tags":["딸기"],"badge":"12/1 출시","soldout":false,"extra":false,"price":39000,"pre":35100,"preLabel":"앱 예약가","size":null,"note":"12/1 매장 출시","imgPage":"https://mo.twosome.co.kr/ev/eventDtl.do?annoSeqNo=261105","imgLabel":"공식 홈페이지","priceSrc":"https://mo.twosome.co.kr/ev/eventDtl.do?annoSeqNo=261105","priceLabel":"공식 홈페이지"},{"b":"투썸플레이스","n":"윈터 스노우맨","d":"초코 시트에 피칸, 카라멜 크림과 소스를 층층이 샌드한 누워 있는 눈사람 케이크.","tags":["무스","캐릭터"],"badge":"12/1 출시","soldout":false,"extra":false,"price":38000,"pre":34200,"preLabel":"앱 예약가","size":null,"note":"12/1 매장 출시","imgPage":"https://mo.twosome.co.kr/ev/eventDtl.do?annoSeqNo=261105","imgLabel":"공식 홈페이지","priceSrc":"https://mo.twosome.co.kr/ev/eventDtl.do?annoSeqNo=261105","priceLabel":"공식 홈페이지"},{"b":"투썸플레이스","n":"윈터 딥 쇼콜라","d":"가나슈와 데블스푸드 시트에 로투스·비스코프 크럼블을 더한 2단.","tags":["초코"],"badge":null,"soldout":false,"extra":false,"price":42000,"pre":35700,"preLabel":"앱 예약가","size":"1호 15cm","note":null,"imgPage":"https://mo.twosome.co.kr/mn/menuInfoDetail.do?menuCd=30702615","imgLabel":"공식 홈페이지","priceSrc":"https://mo.twosome.co.kr/ev/eventCakeDtl.do?annoSeqNo=261111","priceLabel":"공식 홈페이지"},{"b":"투썸플레이스","n":"윈터 레드 베리","d":"초콜릿 무스와 라즈베리 무스, 라즈베리 콤포트를 넣은 빨간 2단 케이크.","tags":["무스","초코"],"badge":"12/1 출시","soldout":false,"extra":false,"price":43000,"pre":36550,"preLabel":"앱 예약가","size":null,"note":"12/1 매장 출시","imgPage":"https://mo.twosome.co.kr/ev/eventDtl.do?annoSeqNo=261105","imgLabel":"공식 홈페이지","priceSrc":"https://mo.twosome.co.kr/ev/eventDtl.do?annoSeqNo=261105","priceLabel":"공식 홈페이지"},{"b":"투썸플레이스","n":"스트로베리 요거트 트리","d":"3년 연속 홀리데이 스테디셀러.","tags":["딸기","트리"],"badge":null,"soldout":false,"extra":false,"price":33000,"pre":29700,"preLabel":"앱 예약가","size":"503g","note":null,"imgPage":"https://mo.twosome.co.kr/mn/menuInfoDetail.do?menuCd=30702157","imgLabel":"공식 홈페이지","priceSrc":"https://mo.twosome.co.kr/ev/eventDtl.do?annoSeqNo=261105","priceLabel":"공식 홈페이지"},{"b":"투썸플레이스","n":"브라우니 루돌프","d":"투썸의 클래식 인기 케이크.","tags":["초코","캐릭터"],"badge":null,"soldout":false,"extra":false,"price":36000,"pre":30600,"preLabel":"앱 예약가","size":"1호 13.2cm","note":null,"imgPage":"https://mo.twosome.co.kr/mn/menuInfoDetail.do?menuCd=30702430","imgLabel":"공식 홈페이지","priceSrc":"https://mo.twosome.co.kr/ev/eventCakeDtl.do?annoSeqNo=261111","priceLabel":"공식 홈페이지"},{"b":"투썸플레이스","n":"화이트 스노우 생크림","d":"구운 치즈와 베리 콤포트를 샌드하고 눈사람 머랭을 올린 생크림 케이크.","tags":["생크림"],"badge":null,"soldout":false,"extra":false,"price":36000,"pre":30600,"preLabel":"앱 예약가","size":"1호 15.5cm","note":null,"imgPage":"https://mo.twosome.co.kr/mn/menuInfoDetail.do?menuCd=30702616","imgLabel":"공식 홈페이지","priceSrc":"https://mo.twosome.co.kr/ev/eventCakeDtl.do?annoSeqNo=261111","priceLabel":"공식 홈페이지"},{"b":"투썸플레이스","n":"화이트 스초생","d":"화이트 초콜릿 생크림에 생딸기를 가득 올린, 홀리데이에 잘 어울리는 순백의 스초생 라인 케이크.","tags":["딸기","생크림"],"badge":null,"soldout":false,"extra":true,"price":39000,"pre":35100,"preLabel":"앱 예약가","size":null,"note":null,"imgPage":"https://mo.twosome.co.kr/mn/menuInfoDetail.do?menuCd=30702247","imgLabel":"공식 홈페이지","priceSrc":"https://mo.twosome.co.kr/ev/eventCakeDtl.do?annoSeqNo=261111","priceLabel":"공식 홈페이지"},{"b":"투썸플레이스","n":"말차 스초생","d":"깊고 진한 말차 시트에 생딸기를 가득 올려 상큼함을 더한 스초생 라인 케이크.","tags":["딸기","생크림"],"badge":null,"soldout":false,"extra":true,"price":39000,"pre":35100,"preLabel":"앱 예약가","size":null,"note":null,"imgPage":"https://www.instagram.com/p/Df4NMvlIOPW/","imgLabel":"공식 인스타그램","priceSrc":"https://mo.twosome.co.kr/ev/eventDtl.do?annoSeqNo=261008","priceLabel":"공식 홈페이지"},{"b":"JW 메리어트 서울","n":"테디 베어 크리스마스","d":"발로나 초콜릿 4종, 샤프란 크림, 브론테 피스타치오 무스, 체리 젤리를 쌓은 트리 케이크.","tags":["초코","무스","트리"],"badge":"대표","soldout":false,"extra":false,"price":450000,"pre":405000,"preLabel":"네이버 선결제가","size":null,"note":null,"imgPage":"https://www.marriott.com/ko/hotels/seljw-jw-marriott-hotel-seoul/experiences/holidays/","imgLabel":"공식 홈페이지","priceSrc":"https://www.marriott.com/ko/offers/festive-cake-off-262714","priceLabel":"공식 홈페이지"},{"b":"JW 메리어트 서울","n":"스노우 스트로베리","d":"생딸기와 마스카포네 크림, 눈 쌓인 듯한 흰 외관.","tags":["딸기"],"badge":null,"soldout":false,"extra":false,"price":150000,"pre":135000,"preLabel":"네이버 선결제가","size":null,"note":null,"imgPage":"https://www.marriott.com/ko/hotels/seljw-jw-marriott-hotel-seoul/experiences/holidays/","imgLabel":"공식 홈페이지","priceSrc":"https://www.marriott.com/ko/offers/festive-cake-off-262714","priceLabel":"공식 홈페이지"},{"b":"JW 메리어트 서울","n":"레드 벨벳 글로우","d":"붉은 촛불 모양. 레드벨벳·초코 스펀지에 크림치즈 버터크림.","tags":["레드벨벳","치즈"],"badge":null,"soldout":false,"extra":false,"price":160000,"pre":144000,"preLabel":"네이버 선결제가","size":null,"note":null,"imgPage":"https://www.marriott.com/ko/hotels/seljw-jw-marriott-hotel-seoul/experiences/holidays/","imgLabel":"공식 홈페이지","priceSrc":"https://www.marriott.com/ko/offers/festive-cake-off-262714","priceLabel":"공식 홈페이지"},{"b":"JW 메리어트 서울","n":"그린 트리 타르트","d":"말차와 유자를 활용한 트리 타르트.","tags":["트리"],"badge":null,"soldout":false,"extra":false,"price":120000,"pre":108000,"preLabel":"네이버 선결제가","size":null,"note":null,"imgPage":"https://www.marriott.com/ko/hotels/seljw-jw-marriott-hotel-seoul/experiences/holidays/","imgLabel":"공식 홈페이지","priceSrc":"https://www.marriott.com/ko/offers/festive-cake-off-262714","priceLabel":"공식 홈페이지"},{"b":"JW 메리어트 서울","n":"베리 부쉬 드 노엘","d":"산타에게 보내는 편지와 우체통 모티브의 부쉬 드 노엘.","tags":["초코"],"badge":null,"soldout":false,"extra":false,"price":135000,"pre":121500,"preLabel":"네이버 선결제가","size":null,"note":null,"imgPage":"https://www.marriott.com/ko/hotels/seljw-jw-marriott-hotel-seoul/experiences/holidays/","imgLabel":"공식 홈페이지","priceSrc":"https://www.marriott.com/ko/offers/festive-cake-off-262714","priceLabel":"공식 홈페이지"},{"b":"JW 메리어트 서울","n":"스타라이트 바닐라 무스","d":"겨울 밤하늘 별을 주제로 한 바닐라 무스.","tags":["무스"],"badge":null,"soldout":false,"extra":false,"price":135000,"pre":121500,"preLabel":"네이버 선결제가","size":null,"note":null,"imgPage":"https://www.marriott.com/ko/hotels/seljw-jw-marriott-hotel-seoul/experiences/holidays/","imgLabel":"공식 홈페이지","priceSrc":"https://www.marriott.com/ko/offers/festive-cake-off-262714","priceLabel":"공식 홈페이지"},{"b":"신라호텔","n":"더 파이니스트 리저브","d":"샤토 디켐과 화이트 트러플로 만든 케이크. 하루 최대 3개만 생산.","tags":["초코"],"badge":"하루 3개","soldout":false,"extra":false,"price":600000,"pre":null,"preLabel":null,"size":null,"note":"전화 예약 전용(02-2230-3377) · 하루 3개 한정","imgPage":"https://www.shillahotels.com/ko/theshilla/seoul/offers/eventDetail.do?no=6056","imgLabel":"공식 홈페이지","priceSrc":"https://www.shillahotels.com/ko/theshilla/seoul/offers/eventDetail.do?no=6056","priceLabel":"공식 홈페이지"},{"b":"신라호텔","n":"더 신라 루돌프 베어","d":"루돌프 뿔을 단 신라베어. 다크 초코 무스, 살구·레몬 잼, 히비스커스 크림.","tags":["초코","무스","캐릭터"],"badge":"NEW","soldout":false,"extra":false,"price":400000,"pre":null,"preLabel":null,"size":null,"note":null,"imgPage":"https://www.shillahotels.com/ko/theshilla/seoul/offers/eventDetail.do?no=6056","imgLabel":"공식 홈페이지","priceSrc":"https://www.shillahotels.com/ko/theshilla/seoul/offers/eventDetail.do?no=6056","priceLabel":"공식 홈페이지"},{"b":"신라호텔","n":"화이트 홀리데이","d":"초콜릿 시트와 딸기, 생크림의 트리 모양 케이크.","tags":["딸기","생크림","트리"],"badge":null,"soldout":false,"extra":false,"price":190000,"pre":null,"preLabel":null,"size":null,"note":"12/25까지만 판매 · 캔들·엽서 포함","imgPage":"https://www.shillahotels.com/ko/theshilla/seoul/offers/eventDetail.do?no=6056","imgLabel":"공식 홈페이지","priceSrc":"https://www.shillahotels.com/ko/theshilla/seoul/offers/eventDetail.do?no=6056","priceLabel":"공식 홈페이지"},{"b":"신라호텔","n":"윈터 그레이스","d":"딸기와 크림을 활용한 케이크.","tags":["딸기","생크림"],"badge":null,"soldout":false,"extra":false,"price":175000,"pre":null,"preLabel":null,"size":null,"note":null,"imgPage":"https://www.shillahotels.com/ko/theshilla/seoul/offers/eventDetail.do?no=6056","imgLabel":"공식 홈페이지","priceSrc":"https://www.shillahotels.com/ko/theshilla/seoul/offers/eventDetail.do?no=6056","priceLabel":"공식 홈페이지"}];
+
+/* 예약 버튼 연결처: 기존 출처 목록 중 실제 예약·사전예약 안내 페이지. kind: book=바로 예약, info=예약 안내, product=상품 페이지 */
+const BOOK = {
+  "스타벅스": { kind: "product", via: "스타벅스 앱 사이렌 오더" },
+  "파스쿠찌": { kind: "info", src: "예약 이벤트" },
+  "뚜레쥬르": { kind: "info", src: "공식 마이크로사이트" },
+  "팀홀튼": { kind: "book", src: "카카오 예약하기" },
+  "파리바게뜨": { kind: "info", src: "공식 홈페이지" },
+  "배스킨라빈스": { kind: "info", src: "예약 이벤트" },
+  "투썸플레이스": { kind: "info", src: "공식 이벤트" },
+  "JW 메리어트 서울": { kind: "book", src: "네이버 예약" },
+  "신라호텔": { kind: "info", src: "공식 홈페이지" }
+};
+
+const imgSrc = (c, size) => `img/${size}/${String(c.no).padStart(2, "0")}.webp`;
+const imgTag = (c, size, eager) => `<img src="${imgSrc(c, size)}" alt="${esc(c.b + " " + c.n)}"${eager ? "" : ' loading="lazy"'} decoding="async">`;
+const fillImgs = null;
+const ICS_DIR = "ics/";
+
+const $ = id => document.getElementById(id);
+const won = n => n.toLocaleString("ko-KR") + "원";
+const esc = s => String(s).replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const disc = c => c.pre && c.price ? Math.round((1 - c.pre / c.price) * 100) : 0;
+const eff = c => c.pre || c.price;
+const brandOrder = Object.keys(BRANDS);
+CAKES.forEach((c, i) => { c.i = i; c.no = i + 1; c.key = c.b + "|" + c.n; });
+const noLabel = c => "No." + String(c.no).padStart(2, "0");
+const PAGE = 12;
+const PICKS = [64, 74, 9, 30];
+const SORTS = [["brand", "기본순"], ["pre", "예약가 낮은순"], ["asc", "정상가 낮은순"], ["desc", "정상가 높은순"], ["disc", "할인율 높은순"]];
+
+
+const THEMES = [
+  ["all", "전체", () => true],
+  ["딸기", "딸기", c => c.tags.includes("딸기")],
+  ["캐릭터", "캐릭터", c => c.tags.includes("캐릭터")],
+  ["u40", "4만원 이하", c => eff(c) <= 40000],
+  ["초코", "초코", c => c.tags.includes("초코")],
+  ["트리", "트리", c => c.tags.includes("트리")],
+  ["생크림", "생크림", c => c.tags.includes("생크림")],
+  ["무스", "무스", c => c.tags.includes("무스")],
+  ["아이스크림", "아이스크림", c => c.tags.includes("아이스크림")],
+  ["치즈", "치즈", c => c.tags.includes("치즈")],
+  ["레드벨벳", "레드벨벳", c => c.tags.includes("레드벨벳")],
+  ["hotel", "호텔", c => BRANDS[c.b].cat === "호텔"]
+];
+const st = { theme: "all", brand: "all", q: "", sort: "brand", limit: PAGE };
+
+/* 날짜·D-day */
+const md = iso => { const p = iso.split("-"); return (+p[1]) + "/" + (+p[2]); };
+function daysTo(iso){
+  const t = new Date(); t.setHours(0, 0, 0, 0);
+  return Math.round((new Date(iso + "T00:00:00") - t) / 86400000);
+}
+function brandDue(name){
+  const br = BRANDS[name];
+  if (br.opens){
+    const n = daysTo(br.opens);
+    if (n > 0) return { n, what: "예약 오픈", date: md(br.opens), iso: br.opens, dd: "D-" + n, chip: `${md(br.opens)} 예약 오픈 · D-${n}`, soon: false, opening: true };
+    if (!br.deadline) return { n: 9999, what: "예약 중", date: "", dd: "예약 중", chip: "예약 중", soon: false, open: true };
+  }
+  if (!br.deadline) return null;
+  const n = daysTo(br.deadline);
+  const what = /^1차/.test(br.reserve) ? "1차 마감" : "마감";
+  if (n < 0) return { n: 10000 - n, what, date: md(br.deadline), dd: "마감", chip: "예약 마감", soon: false, past: true };
+  const dd = n === 0 ? "D-DAY" : "D-" + n;
+  return { n, what, date: md(br.deadline), iso: br.deadline, dd, chip: `${md(br.deadline)} ${what} · ${dd}`, soon: n <= 7 };
+}
+const brandsByDate = () => brandOrder.map(b => ({ b, d: brandDue(b) })).filter(x => x.d).sort((a, b) => a.d.n - b.d.n);
+
+/* .ics 규격: 한 줄 75바이트 넘으면 접기(한글 깨짐 방지 위해 글자 단위) */
+function foldIcs(line){
+  const enc = new TextEncoder(); let out = "", n = 0;
+  for (const ch of line){ const w = enc.encode(ch).length; if (n + w > 73){ out += "\r\n "; n = 1; } out += ch; n += w; }
+  return out;
+}
+/* 캘린더(.ics) — 마감·오픈 전날 오전 9시 알림 */
+const CAL = '<svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="3.5" y="5" width="17" height="15" rx="2"/><path d="M3.5 10h17M8 3v4M16 3v4"/></svg>';
+function icsHref(name){
+  const d = brandDue(name);
+  if (!d || !d.iso) return null;
+  const br = BRANDS[name];
+  const ymd = d.iso.replace(/-/g, "");
+  const nx = new Date(d.iso + "T00:00:00"); nx.setDate(nx.getDate() + 1);
+  const ymd2 = nx.getFullYear() + String(nx.getMonth() + 1).padStart(2, "0") + String(nx.getDate()).padStart(2, "0");
+  const tx = s => String(s).replace(/\\/g, "\\\\").replace(/([,;])/g, "\\$1").replace(/\n/g, "\\n");
+  const title = `${name} 크리스마스 케이크 ${d.what}`;
+  const body = `예약: ${br.reserve}\n수령: ${br.pickup}\n채널: ${br.channel}\n- 오늘뭐먹지? 크리스마스 케이크 총정리`;
+  const ics = ["BEGIN:VCALENDAR", "VERSION:2.0", "PRODID:-//omuk//xmas-cake-2026//KO", "CALSCALE:GREGORIAN", "BEGIN:VEVENT",
+    `UID:omuk-xmas2026-${brandOrder.indexOf(name)}-${ymd}@omuk`, "DTSTAMP:20261124T000000Z",
+    `DTSTART;VALUE=DATE:${ymd}`, `DTEND;VALUE=DATE:${ymd2}`, `SUMMARY:${tx(title)}`, `DESCRIPTION:${tx(body)}`,
+    "BEGIN:VALARM", "TRIGGER:-PT15H", "ACTION:DISPLAY", `DESCRIPTION:${tx("내일 " + title)}`, "END:VALARM",
+    "END:VEVENT", "END:VCALENDAR"].map(foldIcs).join("\r\n");
+  return { href: "data:text/calendar;charset=utf-8," + encodeURIComponent(ics), file: `xmas-cake-${brandOrder.indexOf(name) + 1}-${ymd}.ics`, label: d.opening ? "오픈일 캘린더에 추가" : "마감일 캘린더에 추가" };
+}
+const calBtn = name => {
+  const c = icsHref(name); if (!c) return "";
+  return typeof ICS_DIR === "string"
+    ? `<a class="mini" href="${ICS_DIR}${c.file}">${CAL}${c.label}</a>`
+    : `<a class="mini" href="${c.href}" download="${c.file}">${CAL}${c.label}</a>`;
+};
+
+/* 히어로 */
+function renderHero(){
+  $("hCount").textContent = CAKES.length;
+  $("hCount2").textContent = CAKES.length;
+}
+
+/* 마감·오픈 임박: 누르면 해당 브랜드 목록으로 */
+function renderDeadlines(){
+  const list = brandsByDate().filter(x => !x.d.past && !x.d.open);
+  $("ddRow").innerHTML = list.map(({ b, d }) => `
+    <button class="dd-item" type="button" data-jump="${esc(b)}">
+      <span class="d${d.soon ? " soon" : ""}${d.opening ? " open" : ""}">${d.opening ? "오픈 " : ""}${d.dd}</span>
+      <b>${esc(b)}</b>
+      <small>${d.what} · ${d.date}</small>
+      <span class="go">케이크 보기 ›</span>
+    </button>`).join("");
+}
+
+/* 가격 표기 */
+function priceHTML(c){
+  if (c.pre) return `<span class="c-price"><span class="pct">${disc(c)}%</span><b>${won(c.pre)}</b><span class="lab">예약가</span></span><s class="c-orig">${won(c.price)}</s>`;
+  return `<span class="c-price"><b>${won(c.price)}</b><span class="lab">정상가</span></span>`;
+}
+function dueHTML(c){
+  if (c.soldout) return `<span class="due soon">품절</span>`;
+  const d = brandDue(c.b);
+  return d ? `<span class="due${d.soon ? " soon" : ""}">${esc(d.chip)}</span>` : "";
+}
+
+/* 에디터 픽 */
+function renderPicks(){
+  $("pickRow").innerHTML = PICKS.filter(i => CAKES[i]).map(i => {
+    const c = CAKES[i];
+    return `<div class="pcard">
+      <a class="pcard-link" href="#cake-${c.no}" data-i="${c.i}">
+        <span class="art">
+          ${imgTag(c, "s")}
+          <span class="no">${noLabel(c)}</span>
+          ${c.pre ? `<span class="pct-big">${disc(c)}% 할인</span>` : ""}
+        </span>
+        <span class="c-brand">${esc(c.b)}</span>
+        <span class="c-name">${esc(c.n)}</span>
+        ${priceHTML(c)}
+      </a>
+    </div>`;
+  }).join("");
+}
+
+/* 테마·브랜드 드롭다운 (본문 + 필터 시트에 같이 그림) */
+function renderChips(){
+  /* 본문 3칸은 폭이 좁아 개수 없이, 필터 시트는 개수 포함 */
+  const th = n => THEMES.map(([id, label, fn]) =>
+    `<option value="${esc(id)}">${id === "all" ? "테마 전체" : esc(label) + (n ? ` (${CAKES.filter(fn).length})` : "")}</option>`).join("");
+  const br = n => `<option value="all">브랜드 전체</option>` + brandOrder.map(b =>
+    `<option value="${esc(b)}">${esc(b)}${n ? ` (${CAKES.filter(c => c.b === b).length})` : ""}</option>`).join("");
+  [["themeSel", 0], ["fsTheme", 1]].forEach(([id, n]) => { $(id).innerHTML = th(n); $(id).value = st.theme; $(id).classList.toggle("on", st.theme !== "all"); });
+  [["brandSel", 0], ["fsBrand", 1]].forEach(([id, n]) => { $(id).innerHTML = br(n); $(id).value = st.brand; $(id).classList.toggle("on", st.brand !== "all"); });
+}
+function renderSorts(){
+  const SHORT = { brand: "기본순", pre: "예약가순", asc: "저가순", desc: "고가순", disc: "할인율순" };
+  $("sortSel").innerHTML = SORTS.map(([v, l]) => `<option value="${v}">${SHORT[v]}</option>`).join("");
+  $("fsSort").innerHTML = SORTS.map(([v, l]) => `<option value="${v}">${l}</option>`).join("");
+}
+
+/* 목록 */
+function filtered(){
+  const q = st.q.trim().toLowerCase();
+  const themeFn = (THEMES.find(t => t[0] === st.theme) || THEMES[0])[2];
+  const list = CAKES.filter(c => {
+    if (!themeFn(c)) return false;
+    if (st.brand !== "all" && c.b !== st.brand) return false;
+    if (q && !(c.n + " " + c.d + " " + c.b + " " + c.tags.join(" ")).toLowerCase().includes(q)) return false;
+    return true;
+  });
+  const byBrand = (a, b) => brandOrder.indexOf(a.b) - brandOrder.indexOf(b.b) || a.i - b.i;
+  const so = (a, b) => (a.soldout ? 1 : 0) - (b.soldout ? 1 : 0); // 품절은 항상 맨 뒤
+  if (st.sort === "asc") list.sort((a, b) => so(a, b) || a.price - b.price || byBrand(a, b));
+  else if (st.sort === "desc") list.sort((a, b) => so(a, b) || b.price - a.price || byBrand(a, b));
+  else if (st.sort === "pre") list.sort((a, b) => so(a, b) || eff(a) - eff(b) || byBrand(a, b));
+  else if (st.sort === "disc") list.sort((a, b) => so(a, b) || disc(b) - disc(a) || byBrand(a, b));
+  else list.sort((a, b) => so(a, b) || byBrand(a, b));
+  return list;
+}
+function cardHTML(c){
+  return `<div class="card${c.soldout ? " soldout" : ""}">
+    <a class="card-link" href="#cake-${c.no}" data-i="${c.i}">
+      <span class="art">
+        ${imgTag(c, "s")}
+        <span class="no">${noLabel(c)}</span>
+        ${c.badge ? `<span class="bdg">${esc(c.badge)}</span>` : ""}
+      </span>
+      <span class="c-brand">${esc(c.b)}</span>
+      <span class="c-name">${esc(c.n)}</span>
+      ${priceHTML(c)}
+      ${dueHTML(c)}
+    </a>
+  </div>`;
+}
+const isFiltered = () => st.theme !== "all" || st.brand !== "all" || st.q.trim() !== "";
+function summary(){
+  const parts = [];
+  if (st.theme !== "all") parts.push((THEMES.find(t => t[0] === st.theme) || [, ""])[1]);
+  if (st.brand !== "all") parts.push(st.brand);
+  if (st.q.trim()) parts.push(`'${st.q.trim()}'`);
+  if (st.sort !== "brand") parts.push(SORTS.find(s => s[0] === st.sort)[1]);
+  return parts.length ? parts.join(" · ") : "필터·정렬";
+}
+function render(){
+  const list = filtered();
+  const all = list.length === CAKES.length;
+  $("count").innerHTML = `<b>${list.length}종</b>` + (all ? "" : ` · 전체 ${CAKES.length}종 중`) + (st.theme === "u40" ? " · 예약가 기준" : "");
+  $("reset").hidden = !isFiltered();
+  $("fbarSum").textContent = summary();
+  $("fbarN").textContent = list.length + "종";
+  $("fsApply").textContent = list.length ? `${list.length}종 보기` : "결과 없음";
+  ["sortSel", "fsSort"].forEach(id => { $(id).value = st.sort; $(id).classList.toggle("on", st.sort !== "brand"); });
+  const g = $("grid");
+  if (!list.length){
+    g.innerHTML = '<p class="empty">조건에 맞는 케이크가 없어요.<br><button type="button" data-resetall>필터 초기화</button></p>';
+    $("more").hidden = true;
+    return;
+  }
+  g.innerHTML = list.slice(0, st.limit).map(cardHTML).join("");
+  const rest = list.length - st.limit;
+  $("more").hidden = rest <= 0;
+  if (rest > 0) $("more").textContent = `케이크 더 보기 (${rest}종 남음)`;
+  fillImgs && fillImgs();
+}
+function resetFilters(){ st.theme = "all"; st.brand = "all"; st.q = ""; st.sort = "brand"; st.limit = PAGE; $("q").value = ""; renderChips(); render(); }
+function scrollToResults(){
+  const y = $("countRow").getBoundingClientRect().top + window.scrollY - 56 - 8;
+  window.scrollTo({ top: Math.max(0, y), behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth" });
+}
+
+/* 예약 일정 */
+const chev = '<svg class="chev" width="20" height="20" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>';
+function renderSchedule(){
+  $("sched").innerHTML = brandsByDate().map(({ b, d }) => {
+    const br = BRANDS[b];
+    const n = CAKES.filter(c => c.b === b).length;
+    return `<details>
+      <summary>
+        <span class="s-brand">${esc(b)}<small>${n}종</small></span>
+        <span class="s-dd"><b class="${d.soon ? "soon" : ""}">${d.opening ? "오픈 " : ""}${d.dd}</b><small>${d.open || d.past ? esc(d.what) : `${d.what} ${d.date}`}</small></span>
+        ${chev}
+      </summary>
+      <dl class="info">
+        <dt>예약</dt><dd>${esc(br.reserve)}</dd>
+        <dt>수령</dt><dd>${esc(br.pickup)}</dd>
+        <dt>채널</dt><dd>${esc(br.channel)}</dd>
+        <dt>혜택</dt><dd>${esc(br.perk)}</dd>
+      </dl>
+      <div class="s-acts">${calBtn(b)}<button class="mini" type="button" data-jump="${esc(b)}">${esc(b)} 케이크 ${n}종 보기</button></div>
+      <p class="srcs">출처: ${br.src.map(([t, u]) => `<a href="${esc(u)}" target="_blank" rel="noopener">${esc(t)}</a>`).join(" · ")}</p>
+    </details>`;
+  }).join("");
+}
+
+/* 가격표 */
+function renderPriceTables(){
+  $("ptables").innerHTML = brandOrder.map(name => {
+    const list = CAKES.filter(c => c.b === name).slice().sort((a, b) => a.price - b.price);
+    const lo = list[0].price, hi = list[list.length - 1].price;
+    const rng = lo === hi ? won(lo) : `${won(lo)} ~ ${won(hi)}`;
+    return `<details class="pt">
+      <summary><span>${esc(name)} · ${list.length}종</span><span class="rng">${rng}</span>${chev}</summary>
+      <table>
+        <thead><tr><th>케이크</th><th class="num">정상가</th><th class="num">예약가</th></tr></thead>
+        <tbody>${list.map(c => `<tr>
+          <td><a href="#cake-${c.no}" data-i="${c.i}">${esc(c.n)}</a>${c.size ? `<span class="ch">${esc(c.size)}</span>` : ""}</td>
+          <td class="num">${won(c.price)}</td>
+          <td class="num pre">${c.pre ? `<span class="v">${won(c.pre)}</span><span class="ch">${esc(c.preLabel)}</span>` : `<span class="ch">${c.soldout ? "품절" : "-"}</span>`}</td>
+        </tr>`).join("")}</tbody>
+      </table>
+    </details>`;
+  }).join("");
+}
+
+/* 탭 */
+function selectTab(which){
+  const s = which === "s";
+  $("tabS").setAttribute("aria-selected", s); $("tabP").setAttribute("aria-selected", !s);
+  $("tabS").tabIndex = s ? 0 : -1; $("tabP").tabIndex = s ? -1 : 0;
+  $("panelS").hidden = !s; $("prices").hidden = s;
+}
+
+/* 상세 시트 내용: 가격·마감·예약처를 사진 바로 아래로 */
+function bookLink(c){
+  const bk = BOOK[c.b] || { kind: "product" };
+  const src = bk.src && BRANDS[c.b].src.find(s => s[0] === bk.src);
+  if (bk.kind === "book" && src) return { href: src[1], label: "바로 예약하기", sub: `${src[0]} 페이지로 이동`, big: true };
+  if (bk.kind === "info" && src) return { href: src[1], label: "예약 안내 보기", sub: `${c.b} 공식 페이지` };
+  return { href: c.imgPage, label: "공식 페이지에서 보기", sub: bk.via ? `예약은 ${bk.via}` : "" };
+}
+function sheetHTML(c){
+  const br = BRANDS[c.b];
+  const d = brandDue(c.b);
+  const price = c.pre
+    ? `<span class="pct">${disc(c)}%</span><b>${won(c.pre)}</b><span class="lab">${esc(c.preLabel || "예약가")}</span><s>${won(c.price)}</s>`
+    : `<b>${won(c.price)}</b><span class="lab">정상가</span>`;
+  const dueRow = c.soldout ? `<b class="red">품절</b>`
+    : !d ? "-" : d.open ? "예약 중" : d.past ? "예약 마감" : `<b class="${d.soon ? "red" : ""}">${d.opening ? "오픈 " : ""}${d.dd}</b> · ${d.date} ${d.what}`;
+  return `
+    <div class="sh-img">
+      ${imgTag(c, "l", true)}
+      <span class="no">${noLabel(c)}</span>
+      ${c.badge ? `<span class="bdg">${esc(c.badge)}</span>` : ""}
+    </div>
+    <p class="sh-brand">${esc(c.b)} · ${esc(br.cat)}</p>
+    <h2 id="sheetName">${esc(c.n)}</h2>
+    <div class="sh-price">${price}</div>
+    <p class="sh-key">${dueRow}<br><span style="color:var(--muted)">예약 채널</span> ${esc(br.channel)}</p>
+    <p class="sh-desc">${esc(c.d)}</p>
+    ${c.note ? `<p class="sh-note">${esc(c.note)}</p>` : ""}
+    <div class="tags">${c.tags.map(t => `<span class="tag">${esc(t)}</span>`).join("")}</div>
+    <dl class="info">
+      ${c.size ? `<dt>크기</dt><dd>${esc(c.size)}</dd>` : ""}
+      <dt>예약 기간</dt><dd>${esc(br.reserve)}</dd>
+      <dt>픽업</dt><dd>${esc(br.pickup)}</dd>
+      <dt>혜택</dt><dd>${esc(br.perk)}</dd>
+    </dl>
+    ${c.soldout ? "" : `<div class="s-acts">${calBtn(c.b)}</div>`}
+    <p class="srcs">사진 출처: <a href="${esc(c.imgPage)}" target="_blank" rel="noopener">${esc(c.imgLabel)}</a>${c.priceSrc ? ` · 가격 출처: <a href="${esc(c.priceSrc)}" target="_blank" rel="noopener">${esc(c.priceLabel)}</a>` : ""}</p>`;
+}
+
+/* ===== 모달: 뒤로가기로 닫히도록 history와 연결 ===== */
+if ("scrollRestoration" in history) history.scrollRestoration = "manual";
+let modal = null, lastFocus = null, openIdx = null, lockY = 0, afterClose = null;
+const pageUrl = () => location.href.split("#")[0];
+function lockScroll(){
+  lockY = window.scrollY;
+  Object.assign(document.body.style, { position: "fixed", top: -lockY + "px", left: "0", right: "0", width: "100%" });
+}
+function unlockScroll(){
+  Object.assign(document.body.style, { position: "", top: "", left: "", right: "", width: "" });
+  window.scrollTo(0, lockY);
+}
+function showModal(id, hash){
+  const wasOpen = !!modal;
+  if (!wasOpen){ lastFocus = document.activeElement; lockScroll(); }
+  else $(modal).hidden = true;
+  modal = id;
+  const el = $(id);
+  el.style.transform = ""; el.classList.remove("settle");
+  el.hidden = false; $("sheetBg").hidden = false;
+  if (!wasOpen) history.pushState({ m: id }, "", hash || location.href);
+  else history.replaceState({ m: id }, "", hash || location.href);
+  el.focus({ preventScroll: true });
+}
+function hideModal(){
+  if (!modal) return;
+  $(modal).hidden = true; $("sheetBg").hidden = true;
+  modal = null; openIdx = null;
+  unlockScroll();
+  if (/^#cake-/.test(location.hash)) history.replaceState(null, "", pageUrl());
+  if (lastFocus && lastFocus.focus && document.contains(lastFocus)) lastFocus.focus({ preventScroll: true });
+  const fn = afterClose; afterClose = null;
+  if (fn) fn();
+}
+function closeModal(then){
+  if (!modal) return;
+  afterClose = then || null;
+  if (history.state && history.state.m === modal) history.back(); // popstate → hideModal
+  else hideModal();
+}
+window.addEventListener("popstate", () => { if (modal) hideModal(); });
+
+function openSheet(i){
+  const c = CAKES[i];
+  if (!c) return;
+  openIdx = i;
+  $("sheetBody").innerHTML = sheetHTML(c);
+  $("sheetBody").scrollTop = 0;
+  const bk = bookLink(c);
+  const a = $("sheetLink");
+  if (c.soldout){
+    a.removeAttribute("target"); a.href = "#find"; a.dataset.similar = c.tags[0] || "all";
+    a.className = "btn ghost"; a.innerHTML = `비슷한 ${esc(c.tags[0] || "")} 케이크 보기`;
+  } else {
+    a.target = "_blank"; a.href = bk.href; delete a.dataset.similar;
+    a.className = "btn primary" + (bk.sub ? " stack" : "") + (bk.big ? " big" : "");
+    a.innerHTML = `<span>${esc(bk.label)}${bk.big ? '<svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"/></svg>' : ""}</span>` + (bk.sub ? `<span class="bsub">${esc(bk.sub)}</span>` : "");
+  }
+  a.closest(".sheet-actions").classList.toggle("big", !c.soldout && !!bk.big);
+  showModal("sheet", "#cake-" + c.no);
+  fillImgs && fillImgs();
+}
+function openFilter(){ renderChips(); render(); showModal("fsheet"); }
+
+/* 바텀 시트 아래로 끌어 닫기 (모바일 레이아웃에서만) */
+function enableDrag(sheet){
+  const body = sheet.querySelector(".sheet-body");
+  let y0 = null, dy = 0, t0 = 0, fromBody = false;
+  sheet.addEventListener("touchstart", e => {
+    if (matchMedia("(min-width:640px)").matches) return;
+    const inHead = !!e.target.closest(".sheet-head");
+    fromBody = !inHead && !!e.target.closest(".sheet-body");
+    if (!inHead && !(fromBody && body.scrollTop <= 0)) return;
+    y0 = e.touches[0].clientY; dy = 0; t0 = Date.now();
+  }, { passive: true });
+  sheet.addEventListener("touchmove", e => {
+    if (y0 === null) return;
+    dy = e.touches[0].clientY - y0;
+    if (dy <= 0){ if (fromBody){ y0 = null; } sheet.style.transform = ""; return; }
+    if (fromBody && body.scrollTop > 0){ y0 = null; return; }
+    e.preventDefault();
+    sheet.classList.add("dragging"); sheet.style.transform = `translateY(${dy}px)`;
+  }, { passive: false });
+  sheet.addEventListener("touchend", () => {
+    if (y0 === null) return;
+    sheet.classList.remove("dragging");
+    const fast = dy > 40 && Date.now() - t0 < 250;
+    y0 = null;
+    if (dy > 110 || fast){ closeModal(); }
+    else { sheet.classList.add("settle"); sheet.style.transform = ""; }
+  });
+}
+enableDrag($("sheet")); enableDrag($("fsheet"));
+
+/* 스크롤하면 고정 필터 바 표시 */
+let fbarTick = false;
+function updateFbar(){
+  fbarTick = false;
+  if (modal) return;
+  const toolsGone = $("tools").getBoundingClientRect().bottom < 56;
+  const gridLeft = $("grid").getBoundingClientRect().bottom > 220 || !$("more").hidden && $("more").getBoundingClientRect().bottom > 120;
+  $("fbar").classList.toggle("show", toolsGone && gridLeft);
+}
+window.addEventListener("scroll", () => { if (!fbarTick){ fbarTick = true; requestAnimationFrame(updateFbar); } }, { passive: true });
+
+/* 공유 */
+let toastTimer = null;
+function toast(msg){
+  const t = $("toast");
+  t.textContent = msg; t.classList.add("show");
+  clearTimeout(toastTimer); toastTimer = setTimeout(() => t.classList.remove("show"), 1800);
+}
+async function share(title, url){
+  if (navigator.share){ try { await navigator.share({ title, url }); } catch (e) {} return; }
+  try { await navigator.clipboard.writeText(url); toast("링크를 복사했어요"); }
+  catch (e) { toast("주소창의 링크를 복사해 주세요"); }
+}
+const pageTitle = "2026 크리스마스 케이크 총정리 | 오늘뭐먹지?";
+
+
+/* 이벤트 */
+document.addEventListener("click", e => {
+  const card = e.target.closest("a[data-i]");
+  if (card){ e.preventDefault(); openSheet(+card.dataset.i); return; }
+  const th = e.target.closest("[data-theme]");
+  if (th){ st.theme = th.dataset.theme; st.limit = PAGE; renderChips(); render(); return; }
+  const bb = e.target.closest("[data-brand]");
+  if (bb){ st.brand = bb.dataset.brand; st.limit = PAGE; renderChips(); render(); return; }
+  const jp = e.target.closest("[data-jump]");
+  if (jp){ st.brand = jp.dataset.jump; st.theme = "all"; st.q = ""; $("q").value = ""; st.limit = PAGE; renderChips(); render(); scrollToResults(); return; }
+  if (e.target.closest("[data-resetall]")){ resetFilters(); return; }
+  if (e.target.closest("[data-close]")){ closeModal(); return; }
+});
+$("sheetLink").addEventListener("click", e => {
+  const a = e.currentTarget;
+  if (!a.dataset.similar) return;
+  e.preventDefault();
+  const t = a.dataset.similar;
+  closeModal(() => {
+    st.theme = THEMES.some(x => x[0] === t) ? t : "all"; st.brand = "all"; st.limit = PAGE;
+    renderChips(); render(); scrollToResults();
+  });
+});
+$("ddAll").addEventListener("click", () => selectTab("s"));
+$("tabS").addEventListener("click", () => selectTab("s"));
+$("tabP").addEventListener("click", () => selectTab("p"));
+$("tabS").parentElement.addEventListener("keydown", e => {
+  if (e.key !== "ArrowLeft" && e.key !== "ArrowRight") return;
+  const toP = $("tabS").getAttribute("aria-selected") === "true";
+  selectTab(toP ? "p" : "s"); (toP ? $("tabP") : $("tabS")).focus();
+});
+$("more").addEventListener("click", () => { st.limit += PAGE; render(); });
+$("q").addEventListener("input", e => { st.q = e.target.value; st.limit = PAGE; render(); });
+$("q").addEventListener("keydown", e => { if (e.key === "Enter") e.target.blur(); });
+["themeSel", "brandSel", "sortSel", "fsTheme", "fsBrand", "fsSort"].forEach(id => $(id).addEventListener("change", e => {
+  st[e.target.dataset.k] = e.target.value; st.limit = PAGE; renderChips(); render();
+}));
+$("reset").addEventListener("click", resetFilters);
+$("fsReset").addEventListener("click", resetFilters);
+$("fsApply").addEventListener("click", () => closeModal(scrollToResults));
+$("fbarBtn").addEventListener("click", openFilter);
+$("sheetBg").addEventListener("click", () => closeModal());
+$("shareTop").addEventListener("click", () => share(pageTitle, pageUrl()));
+$("shareCta").addEventListener("click", () => share(pageTitle, pageUrl()));
+$("sheetShare").addEventListener("click", () => {
+  const c = CAKES[openIdx];
+  if (c) share(`${c.b} ${c.n} | 오늘뭐먹지?`, pageUrl() + "#cake-" + c.no);
+});
+document.addEventListener("keydown", e => {
+  if (!modal) return;
+  if (e.key === "Escape"){ closeModal(); return; }
+  if (e.key === "Tab"){
+    const f = [...$(modal).querySelectorAll("button, a[href], select")].filter(el => el.offsetParent !== null);
+    if (!f.length) return;
+    const first = f[0], last = f[f.length - 1];
+    if (document.activeElement === $(modal)){ e.preventDefault(); (e.shiftKey ? last : first).focus(); return; }
+    if (e.shiftKey && document.activeElement === first){ e.preventDefault(); last.focus(); }
+    else if (!e.shiftKey && document.activeElement === last){ e.preventDefault(); first.focus(); }
+  }
+});
+
+renderHero(); renderDeadlines(); renderPicks(); renderSorts(); renderChips(); render(); renderSchedule(); renderPriceTables();
+/* 공유 링크(#cake-N)로 들어오면: 시트를 닫았을 때 페이지에 남도록 기본 상태를 먼저 깔고 연다 */
+const m = location.hash.match(/^#cake-(\d+)$/);
+if (m && CAKES[+m[1] - 1]){ history.replaceState(null, "", pageUrl()); openSheet(+m[1] - 1); }
+</script>
+
+</body>
+</html>
